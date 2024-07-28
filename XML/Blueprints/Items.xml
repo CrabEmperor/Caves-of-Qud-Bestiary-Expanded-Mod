@@ -1,0 +1,1754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <!-- Variety Loot -->   
+  
+  <object Name="IchorSplash" Inherits="Water">
+    <part Name="LiquidVolume" MaxVolume="-1" Volume="1" StartVolume="1" InitialLiquid="ichor-1000" />
+  </object>
+  <object Name="IchorPool" Inherits="Water">
+    <part Name="LiquidVolume" MaxVolume="-1" Volume="10" StartVolume="10d10" InitialLiquid="ichor-1000" />
+  </object>
+
+  <object Name="BaseCannonBallProjectile" Inherits="TemporaryProjectile">
+    <part Name="Render" DisplayName="cannonball" Tile="CuriousTreasures/Cannon_Ball.png" />
+    <part Name="Projectile" PassByVerb="hurl" />
+    <tag Name="Cannonball" />
+    <tag Name="BaseObject" Value="*noinherit" />
+  </object>
+
+  <object Name="Fan Coral" Inherits="Coral">
+    <part Name="Render" DisplayName="fan coral" Tile="CuriousTreasures/Fan_Coral.png" RenderString="157" ColorString="&amp;r" DetailColor="R" Occluding="false" />
+    <part Name="Description" Short="Soft-body beings excrete the calcified walls of their arcologies as beautiful fans. They have stone texture and house microlife in their cavities." />
+    <part Name="RandomColors" TileColor="B,R,g,c" DetailColor="C,O,G,W" />
+    <tag Name="Gender" Value="plural" />
+    <stag Name="Plank" Value="finger" />
+    <stag Name="Fiber" Value="polyp" />
+    <stag Name="FiberMaterial" Value="limestone" />
+  </object>
+  <object Name="Deep Coral" Inherits="Coral">
+    <part Name="Render" DisplayName="deep coral" Tile="CuriousTreasures/Deep_Coral.png" RenderString="157" ColorString="&amp;r" DetailColor="R" Occluding="false" />
+    <part Name="Description" Short="Soft-body beings excrete the calcified walls of their arcologies as threading spires. They have stone texture and house microlife in their cavities." />
+    <part Name="RandomColors" TileColor="B,R,g,c" DetailColor="C,O,G,W" />
+    <tag Name="Gender" Value="plural" />
+    <stag Name="Plank" Value="finger" />
+    <stag Name="Fiber" Value="polyp" />
+    <stag Name="FiberMaterial" Value="limestone" />
+  </object>
+  <object Name="Brain Coral" Inherits="Coral">
+    <part Name="Render" DisplayName="brain coral" Tile="CuriousTreasures/Brain_Coral.png" RenderString="157" ColorString="&amp;r" DetailColor="R" Occluding="false" />
+    <part Name="Description" Short="Soft-body beings excrete the calcified walls of their arcologies as cephalized variagations. They have stone texture and house microlife in their cavities." />
+    <part Name="RandomColors" TileColor="B,R,g,c" DetailColor="C,O,G,W" />
+    <tag Name="Gender" Value="plural" />
+    <stag Name="Plank" Value="finger" />
+    <stag Name="Fiber" Value="polyp" />
+    <stag Name="FiberMaterial" Value="limestone" />
+  </object>
+  <object Name="Barrel Sponge" Inherits="Sponge">
+    <part Name="Render" DisplayName="barrel sponge" Tile="CuriousTreasures/Barrel_Sponge.png" RenderString="239" ColorString="&amp;W" DetailColor="w" Occluding="true" />
+    <part Name="Description" Short="Porous skeletons of spongin poke the inverted tunnel buttes, stone-like, out to angles." />
+    <tag Name="HangingSupport" />
+    <stag Name="Plank" Value="tunnel" />
+    <stag Name="Fiber" Value="ring" />
+    <stag Name="FiberMaterial" Value="sponge" />
+  </object>
+
+  <object Name="Dead Coral" Inherits="PhysicalObject">
+    <part Name="Render" DisplayName="[Coral]" RenderLayer="3" RenderString="157" Tile="terrain/sw_reef_organic_even_1.bmp" ColorString="&amp;r" Occluding="false" />
+    <part Name="Physics" Conductivity="20" Solid="false" Weight="200" Category="Invertebrates" Takeable="false" />
+    <part Name="MentalShield" />
+    <part Name="NoBleed" />
+    <part Name="Springy" Factor="1.0" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="PlantLike" />
+    <tag Name="BodyType" Value="Bush" />
+    <stag Name="Plank" Value="colony" />
+    <stag Name="Fiber" Value="polyp" />
+    <stag Name="FiberMaterial" Value="limestone" />
+    <tag Name="DiscardInsteadOfGeneratingStacked" Value="1"></tag>
+  </object>
+  <object Name="Dead Fan Coral" Inherits="Dead Coral">
+    <part Name="Render" DisplayName="fan coral" Tile="CuriousTreasures/Fan_Coral.png" RenderString="157" ColorString="&amp;y" DetailColor="K" Occluding="false" />
+    <part Name="Description" Short="Soft-body beings excreted the calcified walls of their arcologies as beautiful fans. They have stone texture and housed microlife in their hollow cavities." />
+    <tag Name="Gender" Value="plural" />
+    <stag Name="Plank" Value="finger" />
+    <stag Name="Fiber" Value="polyp" />
+    <stag Name="FiberMaterial" Value="limestone" />
+  </object>
+  <object Name="Dead Deep Coral" Inherits="Dead Coral">
+    <part Name="Render" DisplayName="deep coral" Tile="CuriousTreasures/Deep_Coral.png" RenderString="157" ColorString="&amp;y" DetailColor="K" Occluding="false" />
+    <part Name="Description" Short="Soft-body beings excreted the calcified walls of their arcologies as threading spires. They have stone texture and housed microlife in their hollowed cavities." />
+    <tag Name="Gender" Value="plural" />
+    <stag Name="Plank" Value="finger" />
+    <stag Name="Fiber" Value="polyp" />
+    <stag Name="FiberMaterial" Value="limestone" />
+  </object>
+  <object Name="Dead Brain Coral" Inherits="Dead Coral">
+    <part Name="Render" DisplayName="brain coral" Tile="CuriousTreasures/Brain_Coral.png" RenderString="157" ColorString="&amp;y" DetailColor="K" Occluding="false" />
+    <part Name="Description" Short="Soft-body beings excreted the calcified walls of their arcologies as cephalized variagations. They have stone texture and housed microlife in their hollowed cavities." />
+    <tag Name="Gender" Value="plural" />
+    <stag Name="Plank" Value="finger" />
+    <stag Name="Fiber" Value="polyp" />
+    <stag Name="FiberMaterial" Value="limestone" />
+  </object>
+
+  <object Name="Dark Granite" Inherits="Wall">
+    <part Name="Render" DisplayName="bleak granite" RenderString="177" ColorString="&amp;K^k" TileColor="&amp;K" DetailColor="y" Occluding="true" />
+    <part Name="Physics" Weight="10000" FlameTemperature="99999" VaporTemperature="21500" Takeable="false" Solid="true" />
+    <stat Name="AV" Value="40" />
+    <stat Name="Hitpoints" Value="26000" />
+    <part Name="Description" Short="Feldspar and its cousin rocks are composited and pocked with static-pattern grain. Cracks foreshadow the pebbles of the future." />
+    <tag Name="PaintedWall" Value="wall_rock" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="VaporObject" Value="LavaPuddle" />
+    <tag Name="ImmutableWhenUnexplored" Value="1" />
+    <tag Name="Tier" Value="0" />
+    <xtagGrammar massNoun="true" />
+  </object>
+  <object Name="Fossil Coral Rag" Inherits="BaseSedimentaryRock">
+    <part Name="Render" DisplayName="fossil coral" ColorString="&amp;C^B" TileColor="&amp;y" DetailColor="w" Occluding="true" />
+    <part Name="Physics" Weight="10000" FlameTemperature="99999" VaporTemperature="1500" Takeable="false" Solid="true" />
+    <stat Name="AV" Value="18" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Description" Short="Reefs were the arcologies of the young oceans. Now they are dessicated crypts, their surfaces bitten by forgotten water into rough wounds." />
+    <xtagGrammar massNoun="true" />
+  </object>
+
+  <object Name="AbyssOpenShaft" Inherits="StairsDown">
+    <part Name="Physics" IsReal="false" />
+    <part Name="Render" DisplayName="oceanic rift" ColorString="&amp;B" TileColor="&amp;C" DetailColor="c" RenderString="008" Tile="BestiaryTerrain/Abyssal_Pit.png" />
+    <part Name="StairsDown" Connected="false" PullDown="true" PullMessage="" />
+    <part Name="StairHighlight" bEnabled="false" />
+    <part Name="Description" Short="Darkness floods up the jagged coral edges of an open pit." />
+    <removepart Name="Interesting" />
+    <tag Name="NoAutowalk" />
+    <tag Name="Gender" Value="neuter" />
+    <xtagGrammar iArticle="" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="DreadOpenShaft" Inherits="StairsDown">
+    <part Name="Physics" IsReal="false" />
+    <part Name="Render" DisplayName="magma funnel" ColorString="&amp;B" TileColor="&amp;K" DetailColor="o" RenderString="008" Tile="BestiaryTerrain/Dread_Pit.png" />
+    <part Name="StairsDown" Connected="false" PullDown="true" PullMessage="" />
+    <part Name="StairHighlight" bEnabled="false" />
+    <part Name="Description" Short="Darkness floods up the lava funneled edges of an open pit." />
+    <removepart Name="Interesting" />
+    <tag Name="NoAutowalk" />
+    <tag Name="Gender" Value="neuter" />
+    <xtagGrammar iArticle="" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Scythe" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="scythe" ColorString="&amp;y" DetailColor="w" Tile="CuriousTreasures/Scythe.png" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="2" BaseDamage="1d6+1" />
+    <part Name="Commerce" Value="15" />
+    <part Name="Description" Short="Its bitten iron blade stays ready to cut root and stem, and skin oil stains the straps of its long leathery haft." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="1" />
+    <part Name="Physics" Weight="7" UsesTwoSlots="true" />
+    <tag Name="SwingSound" Value="Sounds/Melee/axes/sfx_melee_axe_twoHanded_metal_swing" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Spiked Mace" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="spiked mace" Tile="CuriousTreasures/Spiked_Maul.png" ColorString="&amp;y" DetailColor="K"/>
+    <part Name="MeleeWeapon" MaxStrengthBonus="2" BaseDamage="2" Skill="Cudgel" Stat="Strength" />
+    <part Name="BleedingOnHit" Amount="1" SaveTarget="5" Stack="true" />
+    <part Name="Commerce" Value="14" />
+    <part Name="Description" Short="Iron lines unfold into a metal orb bristling with thorns." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="1" />
+    <part Name="Physics" Weight="7" />  
+    <tag Name="DynamicObjectsTable:Filth" />  
+    <tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_oneHanded_metal_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_metal_blocked" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_bludgeon_metal_light" />
+  </object>
+  <object Name="Flail" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="flail" Tile="CuriousTreasures/Flail.png" ColorString="&amp;y" DetailColor="K"/>
+    <part Name="MeleeWeapon" HitBonus="-1" MaxStrengthBonus="2" BaseDamage="1d8" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="14" />
+    <part Name="Description" Short="Iron lines chain down a writhing star of metal." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="1" />
+    <part Name="Physics" Weight="8" />    
+    <tag Name="DynamicObjectsTable:Filth" />  
+    <tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_oneHanded_metal_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_metal_blocked" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_bludgeon_metal_light" />
+  </object>
+  <object Name="Scimitar" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="scimitar" Tile="CuriousTreasures/Scimitar.png" ColorString="&amp;y" DetailColor="w"/>
+    <part Name="MeleeWeapon" PenBonus="1" MaxStrengthBonus="2" BaseDamage="1d3" Skill="LongBlades" />
+    <part Name="Commerce" Value="15" />
+    <part Name="Description" Short="Iron vigorously curves along a sharpened meridian, and skin oil dampens the leather grip." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="1" />
+    <tag Name="DynamicObjectsTable:Filth" />  
+		<stag Name="Contemporary" />
+  </object>
+  <object Name="CrossBow" Inherits="BaseBow">
+    <part Name="Render" DisplayName="crossbow" Tile="CuriousTreasures/Crossbow.png" DetailColor="y" />
+    <part Name="Physics" UsesTwoSlots="true" />
+    <part Name="Commerce" Value="25" />
+    <part Name="MissileWeapon" Skill="Rifle" AmmoChar="-" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="9" />
+    <part Name="MagazineAmmoLoader" MaxAmmo="1" ReloadEnergy="0" AmmoPart="AmmoArrow" />
+    <part Name="Description" Short="An elaborate contraption of gnarled wood and cold metal held together by greased strings." />
+    <part Name="MissilePerformance" PenetrationModifier="1"/>
+    <tag Name="Tier" Value="1" />
+    <tag Name="DynamicObjectsTable:Filth" />  
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Bows/sfx_missile_bow_fire" />
+    <tag Name="ReloadSound" Value="Sounds/Missile/Reloads/sfx_missile_bow_reload" />
+    <tag Name="NoAmmoSound" Value="Sounds/Missile/NoAmmos/sfx_missile_bow_fire_noAmmo" />
+		<stag Name="Contemporary" />
+  </object>
+
+  <object Name="Warpstone" Inherits="Gemstone">
+    <part Name="Render" DisplayName="{{G|ominous gem}}" ColorString="&amp;g" TileColor="&amp;g" DetailColor="G" RenderString="*" Tile="CuriousTreasures/Warpstone.png" RenderLayer="5" />
+    <part Name="Description" Short="The horrid light of unseen ages has been entombed within this glinting fragment. It glows in a disturbing manner." />
+    <part Name="Commerce" Value="200" />
+		<stag Name="Precious" />
+		<stag Name="Contemporary" />
+    <part Name="LightSource" Lit="true" Radius="1" />
+    <part Name="Physics" Category="Trade Goods" />
+    <tag Name="Tier" Value="2" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Drake Scale" Inherits="Food">
+    <part Name="Render" DisplayName="{{R|drake scale}}" Tile="CuriousTreasures/Drake_Scale.png" ColorString="&amp;R" DetailColor="O" RenderString="*" RenderLayer="5"/>         
+<part Name="Commerce" Value="700" />
+    <part Name="Description" Short="The fallen scale of a winged terror. It contains the essence of flame and burning death." />
+    <part Name="StatOnEat" Stats="HeatResistance:5" />
+    <tag Name="Gift" Value="*noinherit" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Tier" Value="3" />
+  </object>
+
+  <object Name="Fetid Muck" Inherits="BaseStone">
+    <part Name="Render" DisplayName="fetid muck" Tile="CuriousTreasures/Fetid_Muck.png" ColorString="&amp;w" DetailColor="Y"/>
+    <part Name="Physics" Weight="5" />
+    <part Name="Description" Short="A mass of indeterminate muck was shaped and tumbled by a cruel hand into a sphere." />
+    <part Name="ThrownWeapon" Damage="1d6" />
+    <part Name="DiseaseOnHit" Chance="50" />
+	  <tag Name="ImpactSound" Value="Sounds/Throw/sfx_throwing_stone_small_impact" />
+	  <tag Name="ThrownSound" Value="Sounds/Throw/sfx_throwing_stone_small_throw" />
+    <tag Name="Tier" Value="2" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Huge Club" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="club" Tile="Items/sw_cudgel_10.bmp" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="4" BaseDamage="2d2" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="25" />
+    <part Name="Description" Short="Wood was shaved into an enormous bludgeoning bulb." />
+    <tag Name="Tier" Value="4" />
+    <part Name="Physics" Weight="4" /> 
+    <part Name="ModGigantic" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Bronze Spear" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="bronze spear" Tile="CuriousTreasures/Bronze_Spear.png" ColorString="&amp;w" DetailColor="O"/>
+    <part Name="MeleeWeapon" MaxStrengthBonus="7" BaseDamage="2d3" />
+    <part Name="Commerce" Value="100" />
+    <part Name="Description" Short="A mass of forged bronze has been shaped into a skewering implement as vast as a weaver's beam." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="4" />
+    <part Name="Physics" Weight="4" />
+    <part Name="ModGigantic" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Bronze Coat" Inherits="BaseArmor">
+    <part Name="Armor" AV="5" DV="-5" WornOn="Body" />
+    <part Name="Render" DisplayName="{{O|bronze}} Coat" ColorString="&amp;O" RenderString="]" Tile="CuriousTreasures/Bronze_Coat.png" DetailColor="r" />
+    <part Name="Commerce" Value="300" />
+    <part Name="Description" Short="An enormous coat of bronze mail fit for a mighty warrior." />
+    <part Name="Physics" Weight="25" />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="4" />
+    <part Name="ModGigantic" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Hermit Shell" Inherits="BaseArmor">
+    <part Name="Armor" AV="8" DV="-4" WornOn="Body" />
+    <part Name="Render" DisplayName="{{w|hermit}} shell" ColorString="&amp;W" RenderString="]" Tile="CuriousTreasures/hermit_shell.png" DetailColor="w" />
+    <part Name="Commerce" Value="600" />
+    <part Name="Description" Short="An enormous shell of a great abyssal gastropod now a mighty redoubt." />
+    <part Name="Physics" Weight="85" Organic="true"/>
+    <tag Name="Tier" Value="6" />
+    <tag Name="UsesSlots" Value="Body,Back" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Orcish Warbow" Inherits="BaseBow">
+    <part Name="Render" DisplayName="{{r|orcish}} warbow" Tile="CuriousTreasures/Orcish_Warbow.png" ColorString="&amp;r" DetailColor="w" />
+    <part Name="Physics" UsesTwoSlots="true" Organic="false" />
+    <part Name="Commerce" Value="300" />
+    <part Name="MissileWeapon" Skill="Rifle" AmmoChar="-" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="9" ProjectilePenetrationStat="Strength" />
+    <part Name="MissilePerformance" PenetrationModifier="5" DamageDieModifier="5" DamageModifier="2" />
+    <part Name="MagazineAmmoLoader" MaxAmmo="1" ReloadEnergy="0" AmmoPart="AmmoArrow" NameForStatus="ProjectileDock" />
+    <part Name="Metal" />
+    <part Name="Description" Short="Crudely constructed yet remarkably powerful this weapon was made in the fabled forges of Ogmag in the frozen north. The bowstring is waxed with a mysterious fat better left unknown." />
+    <part Name="RulesDescription" Text="This weapon increases the base penetration of its ammo by 5.
+This weapon increases the damage die of its ammo by 5.
+This weapon increases the damage bonus of its ammo by 2." />
+    <tag Name="Tier" Value="6" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Bows/sfx_missile_bow_fire" />
+    <tag Name="ReloadSound" Value="Sounds/Missile/Reloads/sfx_missile_bow_reload" />
+    <tag Name="NoAmmoSound" Value="Sounds/Missile/NoAmmos/sfx_missile_bow_fire_noAmmo" />
+  </object>
+
+  <object Name="Foul Rifle" Inherits="BaseRifle">
+    <part Name="Render" DisplayName="{{foul|foul}} rifle" ColorString="&amp;K" TileColor="&amp;K" DetailColor="y" Tile="CuriousTreasures/Foul_Rifle.png" />
+    <part Name="Description" Short="A weapon of elder and barbaric ages ruled by the gun as lord of death and master of fate. For all its age it is still deadly indeed." />
+    <part Name="Physics" Weight="12" UsesTwoSlots="true" />
+    <part Name="MissileWeapon" Skill="Rifle" AmmoChar="&amp;G~" ShotsPerAction="4" AmmoPerAction="4" ShotsPerAnimation="1" WeaponAccuracy="2" />
+    <part Name="Commerce" Value="2400" />
+    <part Name="Metal" />
+    <part Name="MagazineAmmoLoader" ProjectileObject="ProjectileFoulShell" AmmoPart="AmmoSlug" MaxAmmo="24" />
+    <tag Name="Mods" Value="MissileWeaponMods,FirearmMods,CommonMods,RifleMods" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Rifles/sfx_missile_musket_fire" />
+	  <tag Name="ReloadSound" Value="Sounds/Missile/Reloads/sfx_missile_musket_reload" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="DynamicObjectsTable:Guns" />
+		<stag Name="Historical" />
+  </object>
+  <object Name="ProjectileFoulShell" Inherits="BaseLeadSlugProjectile">
+    <part Name="Projectile" BasePenetration="14" BaseDamage="1d12" />
+  </object>
+
+  <object Name="Rabbit Bracelet" Inherits="BaseUtilityBracelet">
+    <part Name="Armor" DV="2" ToHit="1" WornOn="Arm" />
+    <part Name="Render" DisplayName="lucky rabbit's foot" Tile="CuriousTreasures/Rabbit_Foot.png" ColorString="&amp;k" TileColor="&amp;w" DetailColor="y"/>
+    <part Name="Description" Short="The severed foot of a rabbit. The luck of its owner has been passed on to its bearer." />
+    <part Name="Physics" Weight="1" Organic="true" />
+    <part Name="Commerce" Value="150" />
+    <part Name="Springy" Factor="0.5" />
+    <tag Name="Tier" Value="1" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Naval Shot" Inherits="Projectile">
+    <part Name="Render" DisplayName="cannonball" ColorString="&amp;K" DetailColor="r" Tile="CuriousTreasures/Cannon_Ball.png" />
+    <part Name="Cannonball" ProjectileObject="ProjectileCannonball" />
+    <part Name="Physics" Category="Ammo" Weight="10"/>
+    <part Name="Description" Short="A lump of crude metal has been forged into a sphere of terrible destruction." />
+    <part Name="TinkerItem" Bits="C" CanBuild="true" CanDisassemble="false" NumberMade="1" />
+    <tag Name="AlwaysStack" Value="Yes" />
+    <tag Name="DynamicObjectsTable:Ammo" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Tier" Value="1" />
+  </object>
+  <object Name="ProjectileCannonball" Inherits="BaseCannonBallProjectile">
+    <part Name="Projectile" BasePenetration="12" BaseDamage="2d6" />
+  </object>
+  <object Name="Naval Bombard" Inherits="BaseMagazineHeavyWeapon">
+    <part Name="Render" DisplayName="naval bombard" Tile="CuriousTreasures/Naval_Bombard.png" ColorString="&amp;o" DetailColor="r"/>
+    <part Name="Physics" Weight="100" UsesTwoSlots="true" />
+    <part Name="Commerce" Value="750" />
+    <part Name="Examiner" Unknown="UnknownStrangeTubes" Alternate="UnknownStrangeTubes" Complexity="3" />
+    <part Name="MissileWeapon" AnimationDelay="0" Skill="HeavyWeapons" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="8" RangeIncrement="6" />
+    <part Name="MagazineAmmoLoader" ProjectileObject="ProjectileBombard" AmmoPart="Cannonball" MaxAmmo="2" />
+    <part Name="Description" Short="A burnished bronze cannon from an age perished to ruin. Once such weapons brought empires to ruin, perhaps an echo of that glory shall echo down through time." />
+    <part Name="Metal" />
+    <part Name="ItemElements" Elements="might::1" />
+    <part Name="TinkerItem" Bits="004" CanDisassemble="true" CanBuild="false" />
+    <tag Name="Tier" Value="6" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Heavy Weapons/sfx_missile_grenadeLauncher_fire" />
+	  <tag Name="ReloadSound" Value="Sounds/Missile/Reloads/sfx_missile_grenadeLauncher_reload" />
+  </object>
+  <object Name="ProjectileBombard" Inherits="ProjectileCannonball">
+    <part Name="Projectile" BasePenetration="16" BaseDamage="3d6" />
+    <part Name="ExplodeOnHit" Force="8000" Damage="4d8" />
+  </object>
+
+  <object Name="Chitin Axe" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="{{o|chitinoth}} axe" Tile="CuriousTreasures/Chitin_Axe.png" ColorString="&amp;o" DetailColor="g" />
+    <part Name="MeleeWeapon" HitBonus="1" PenBonus="5" MaxStrengthBonus="16" BaseDamage="4d3" Skill="Axe" Stat="Strength" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="Description" Short="The torn and broken armor plating of an indomitable chitinoth. The shattered chitin is deadly sharp and crushingly heavy." />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <part Name="Physics" Weight="75" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="5000" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <!-- Citadels Loot -->     
+<object Name="Chitin Wall" Inherits="Wall">
+    <part Name="Render" DisplayName="chitin wall" Tile="CuriousTreasures/Chitin_Wall.png" ColorString="&amp;W" DetailColor="w"/>
+    <part Name="Physics" Weight="5000" FlameTemperature="5000" VaporTemperature="5000" Takeable="false" Solid="true" />
+    <stat Name="AV" Value="7" />
+    <stat Name="Hitpoints" Value="75" />
+    <part Name="Description" Short="A wall of mighty chitin forged to defend the homes of insect royalty." />
+		<tag Name="PaintedWall" Value="*delete" />
+    <stat Name="HeatResistance" Value="5" />
+    <stat Name="ColdResistance" Value="75" />
+    <tag Name="ImmutableWhenUnexplored" Value="1" />
+    <xtagGrammar massNoun="true" />
+  </object>
+  <object Name="Chitin Carapace" Inherits="BaseArmor">
+    <part Name="Armor" AV="4" DV="-3" WornOn="Body" />
+    <part Name="Render" DisplayName="{{W|chitin}} mail" ColorString="&amp;w" RenderString="]" Tile="CuriousTreasures/Chitin_Carapace.png" DetailColor="G" />
+    <part Name="Commerce" Value="70" />
+    <part Name="Description" Short="The carapace of some mighty arthropod hollowed out for the use of insect nobility." />
+    <part Name="Physics" Weight="25" Organic="true" />
+    <part Name="AddsRep" Faction="Insects" Value="50" />
+    <tag Name="Tier" Value="3" />
+  </object>
+  <object Name="Chitin Gauntlets" Inherits="BaseGauntlet">
+    <part Name="Armor" AV="2" DV="-2" WornOn="Hands" />
+    <part Name="Render" DisplayName="{{W|chitin}} gauntlets" RenderString="]" ColorString="&amp;w" DetailColor="G" Tile="CuriousTreasures/Chitin_Gauntlets.png" />
+    <part Name="Commerce" Value="40" />
+    <part Name="Description" Short="Gauntlets of shaped chitin shaped for the needs of arthropod warriors." />
+    <part Name="Physics" Weight="6" Organic="true" />
+    <part Name="AddsRep" Faction="Insects" Value="50" />
+    <tag Name="Tier" Value="3" />
+  </object>
+  <object Name="Chitin Boots" Inherits="BaseBoot">
+    <part Name="Armor" AV="2" DV="-1" WornOn="Feet" />
+    <part Name="Render" DisplayName="{{W|chitin}} boots" ColorString="&amp;w" DetailColor="G" Tile="CuriousTreasures/Chitin_Boots.png" RenderString="]" />
+    <part Name="Commerce" Value="50" />
+    <part Name="Description" Short="Boots wrought of fallen chitin from some primordial insect now used as symbols of might and status." />
+    <part Name="Physics" Weight="8" Organic="true" />
+    <part Name="AddsRep" Faction="Insects" Value="50" />
+    <tag Name="Tier" Value="3" />
+  </object>
+  <object Name="Chitin Helm" Inherits="BaseHelmet">
+    <part Name="Armor" AV="2" DV="-2" WornOn="Head" />
+    <part Name="Render" DisplayName="{{W|chitin}} helm" RenderString="]" ColorString="&amp;w" DetailColor="G" Tile="CuriousTreasures/Chitin_Helm.png" />
+    <part Name="Commerce" Value="55" />
+    <part Name="Description" Short="The hollowed head molt of some forgotten insect lord now worn in their honor." />
+    <part Name="Physics" Weight="7" Organic="true" />
+    <part Name="AddsRep" Faction="Insects" Value="50" />
+    <tag Name="Tier" Value="3" />
+  </object>
+
+  <object Name="Pollen" Inherits="Token">
+    <part Name="Render" DisplayName="{{W|pollen}}" ColorString="&amp;W" TileColor="&amp;W" DetailColor="Y" RenderString="*" Tile="CuriousTreasures/Pollen.png" RenderLayer="5" />
+    <part Name="Description" Short="A mess of floral pollen highly desired by insects and those who make trade with them." />
+    <part Name="Commerce" Value="150" />
+		<stag Name="Precious" />
+		<stag Name="Contemporary" />
+    <part Name="Physics" Category="Trade Goods" />
+  </object>
+
+  <object Name="Chitin Chest" Inherits="Chest">
+    <part Name="Render" DisplayName="chitin chest" Tile="CuriousTreasures/Chitin_Chest.png" TileColor="&amp;W" DetailColor="G" RenderString="%" ColorString="&amp;k" RenderLayer="5" />
+    <part Name="Inventory" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="InventoryPopulationTable" Value="Chitin Treasure" />
+    <tag Name="Tier" Value="4" />
+    <tag Name="Role" Value="Rare" />
+    <part Name="Description" Short="A wooden chest reinforced with arthropod chitin to contain their treasures." />
+    <tag Name="Gender" Value="plural" />
+  </object>
+
+  <!-- Mechacolossus Loot -->     
+<object Name="Mecha colossus hatch0" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{r|rusted exit hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;r" DetailColor="o"/>
+    <part Name="Description" Short="An ornately stamped and timeworn hatch now rusted into decay." />
+    <part Name="Metal" />
+<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+ </object>
+<object Name="Mecha colossus hatch1" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{C|exit hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;K" DetailColor="C"/>
+    <part Name="Description" Short="An ornately stamped and timeworn exit hatch from the depths of the great machine colossus." />
+		<part Name="RulesDescription" Text="Provides egress from the depths of the great mechacolossus." />
+    <part Name="Metal" />
+<part Name="InteriorPortal" OpenTile="CuriousTreasures/Escape_Hatch_Open.png" />
+<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+ </object>
+<object Name="Mecha colossus hatch2" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{C|interior hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;K" DetailColor="C"/>
+<part Name="Description" Short="A hatch which opens into a yet deeper layer of the great machine colossus. The map upon the hatch indicates it leads to the hip segment of the great machine." />
+<part Name="Interior" Cell="Mecha_colossus_Hip" FallDistance="2" />
+ </object>
+<object Name="Mecha colossus hatch3" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{C|interior hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;K" DetailColor="C"/>
+<part Name="Description" Short="A hatch which opens into a yet deeper layer of the great machine colossus. The map upon the hatch indicates it leads to the right leg of the great machine." />
+<part Name="Interior" Cell="Mecha_colossus_RightLeg" FallDistance="2" />
+ </object>
+<object Name="Mecha colossus hatch8" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{C|interior hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;K" DetailColor="C"/>
+<part Name="Description" Short="A hatch which opens into a yet deeper layer of the great machine colossus. The map upon the hatch indicates it leads to the left leg of the great machine." />
+<part Name="Interior" Cell="Mecha_colossus_LeftLeg" FallDistance="2" />
+ </object>
+<object Name="Mecha colossus hatch4" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{C|interior hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;K" DetailColor="C"/>
+<part Name="Description" Short="A hatch which opens into a yet deeper layer of the great machine colossus. The map upon the hatch indicates it leads to the chest segment of the great machine." />
+<part Name="Interior" Cell="Mecha_colossus_Chest" FallDistance="2" />
+ </object>
+<object Name="Mecha colossus hatch5" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{C|interior hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;K" DetailColor="C"/>
+<part Name="Description" Short="A hatch which opens into a yet deeper layer of the great machine colossus. The map upon the hatch indicates it leads to the left arm of the great machine." />
+<part Name="Interior" Cell="Mecha_colossus_LeftArm" FallDistance="2" />
+ </object>
+<object Name="Mecha colossus hatch6" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{C|interior hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;K" DetailColor="C"/>
+<part Name="Description" Short="A hatch which opens into a yet deeper layer of the great machine colossus. The map upon the hatch indicates it leads to the right arm of the great machine." />
+<part Name="Interior" Cell="Mecha_colossus_RightArm" FallDistance="2" />
+ </object>
+<object Name="Mecha colossus hatch7" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{C|interior hatch}}" Tile="CuriousTreasures/Escape_Hatch.png" ColorString="&amp;K" DetailColor="c"/>
+<part Name="Description" Short="A hatch which opens into a yet deeper layer of the great machine colossus. The map upon the hatch indicates it leads to the head of the great machine. Shadows seep from the cracks in the hatch." />
+<part Name="Interior" Cell="Mecha_colossus_Head" FallDistance="2" />
+ </object>
+	<object Name="MechaColossusInteriorWall" Inherits="Wall">
+		<part Name="Physics" FlameTemperature="1200" />
+		<part Name="Render" DisplayName="primordial mechanical wall" RenderString="178" ColorString="&amp;C^c" DetailColor="k" />
+		<part Name="Description" Short="A wall of living metal now flagging under the weight of eternity as gears and other mechanical elements peek through break in what was once a glistening chrome lining." />
+		<stat Name="AV" Value="50" />
+		<stat Name="Hitpoints" Value="1000" />
+		<tag Name="PaintedWall" Value="wall_golem_interior" />
+		<tag Name="PaintedWallAtlas" Value="Assets_Content_Textures_Walls_" />
+		<tag Name="PaintedWallExtension" Value=".png" />
+		<tag Name="PaintWith" Value="GolemInteriorWall" />
+		<xtagGrammar massNoun="true" />
+		<tag Name="Diggable" Value="*delete" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+	</object>
+  <object Name="Fire mechsword" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="{{R|Flaming}} mech sword" Tile="CuriousTreasures/Flaming_Mechsword.png" ColorString="&amp;R" DetailColor="O" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="2d6" Skill="LongBlades" />
+    <part Name="ElementalDamage" Damage="1d10" Attributes="Heat" />
+    <part Name="Commerce" Value="490" />
+    <part Name="Description" Short="The arts of weapon making of the elder Saad may never be surpassed, so profound was their technology that even after all this time the great machine can forge new weapons in those remarkable designs. This is a blazing sword of ruinous might." />
+    <part Name="Metal" />
+    <part Name="Physics" Weight="4" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Tier" Value="6" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_crysteel_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_crysteel_blocked" />
+  </object>
+  <object Name="Frost mechsword" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="{{C|Freezing}} mech sword" Tile="CuriousTreasures/Frost_Mechblade.png" ColorString="&amp;Y" DetailColor="C" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="2d6" Skill="LongBlades" />
+    <part Name="ElementalDamage" Damage="1d10" Attributes="Cold" />
+    <part Name="Commerce" Value="490" />
+    <part Name="Description" Short="The arts of weapon making of the elder Saad may never be surpassed, so profound was their technology that even after all this time the great machine can forge new weapons in those remarkable designs. This is a freezing sword of deadly grace." />
+    <part Name="Metal" />
+    <part Name="Physics" Weight="4" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Tier" Value="6" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_crysteel_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_crysteel_blocked" />
+  </object>
+  <object Name="Wind mechaxe" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="{{G|Wind}} mech axe" Tile="CuriousTreasures/Wind_Mechaxe.png" ColorString="&amp;G" DetailColor="Y" />
+    <part Name="MeleeWeapon" HitBonus="3" PenBonus="1" MaxStrengthBonus="8" BaseDamage="1d8+2" />
+    <part Name="Commerce" Value="490" />
+    <part Name="Physics" Weight="5" FlameTemperature="99999" VaporTemperature="9999" />
+    <part Name="Description" Short="The arts of weapon making of the elder Saad may never be surpassed, so profound was their technology that even after all this time the great machine can forge new weapons in those remarkable designs. This is a dashing axe of valours strength." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="6" />
+    <tag Name="DynamicObjectsTable:Filth" />
+		<tag Name="SwingSound" Value="Sounds/Melee/axes/sfx_melee_axe_crysteel_swing" />
+  </object>
+  <object Name="Earth mechboots" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="{{w|Earth}} mech boots" Tile="CuriousTreasures/Earth_MechBoots.png" ColorString="&amp;w" DetailColor="W" />
+    <part Name="Armor" AV="2" DV="-1" WornOn="Feet" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="1d8+1" Slot="Feet" />
+    <part Name="Commerce" Value="490" />
+    <part Name="Description" Short="The arts of weapon making of the elder Saad may never be surpassed, so profound was their technology that even after all this time the great machine can forge new weapons in those remarkable designs. This is a reckless pair of crushing boots." />
+    <part Name="Metal" />
+    <part Name="Physics" Weight="8" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Tier" Value="6" />
+    <tag Name="DynamicObjectsTable:Filth" />
+		<tag Name="SwingSound" Value="Sounds/Melee/axes/sfx_melee_axe_crysteel_swing" />
+  </object>
+  <object Name="Stone mechclaw" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="{{K|Stone}} mech claw" Tile="CuriousTreasures/Stone_Mechclaw.png" ColorString="&amp;k" DetailColor="K" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="1d12" />
+    <part Name="BleedingOnHit" Amount="2-3" SaveTarget="35" Stack="true" />
+    <part Name="Commerce" Value="490" />
+    <part Name="Description" Short="The arts of weapon making of the elder Saad may never be surpassed, so profound was their technology that even after all this time the great machine can forge new weapons in those remarkable designs. This is a brutish rending claw." />
+    <part Name="Metal" />
+    <part Name="Drill" ChargeUse="0" PenetrationBonus="30" HitsRequired="5" IsBootSensitive="false" IsEMPSensitive="false" IsPowerSwitchSensitive="false" IsPowerLoadSensitive="false" IsTechScannable="false" />
+    <part Name="DiggingTool" />
+    <part Name="Physics" Weight="2" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Tier" Value="6" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Aquatic mechhook" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="{{B|Aquatic}} mech hook" Tile="CuriousTreasures/Liquid_Mechhook.png" ColorString="&amp;b" DetailColor="B" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="1d12" />
+    <part Name="StunOnHit" Chance="10" Duration="2" />
+    <part Name="Commerce" Value="490" />
+    <part Name="Description" Short="The arts of weapon making of the elder Saad may never be surpassed, so profound was their technology that even after all this time the great machine can forge new weapons in those remarkable designs. This is an elegant hook of lithe ferocity." />
+    <part Name="Metal" />
+    <part Name="Physics" Weight="2" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Tier" Value="6" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Warrior Mask" Inherits="BaseMask">
+    <part Name="Armor" AV="2" DV="-1" Strength="1" Willpower="1" WornOn="Face" />
+    <part Name="Render" DisplayName="{{y|warrior}} mask" RenderString="]" Tile="CuriousTreasures/Warrior_Mask.png" ColorString="&amp;y" DetailColor="c" />
+    <part Name="Commerce" Value="490" />
+    <part Name="Description" Short="A mechanical mask of the valiant robot warriors within the great mechacolossus." />
+    <part Name="Physics" Weight="2" />
+    <part Name="Metal" />
+    <part Name="Springy" Factor="0.9" />
+    <part Name="AddsRep" Faction="Robots" Value="100" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Dread Mask" Inherits="BaseMask">
+    <part Name="Armor" AV="1" DV="1" WornOn="Face" />
+    <part Name="Render" DisplayName="{{k|dread}} mask" RenderString="]" Tile="CuriousTreasures/Dread_Mask.png" ColorString="&amp;k" DetailColor="K" />
+    <part Name="LifeSaver" ChanceVsLethal="100" ChanceVsMaxHitpointsThreshold="100" MaxHitpointsThreshold="50" MaxUses="1" DestroyWhenUsedUp="true" ChargeUse="0" IsEMPSensitive="false" LethalMessage="=subject.Name's= =object.name= =objverb:burst= apart, destroying =objpronouns.reflexive= to prevent potentially lethal damage." MaxHitpointsThresholdMessage="=subject.Name's= =object.name= =objverb:burst= outward, destroying =objpronouns.reflexive= to prevent catastrophic damage." 
+NameForStatus="FateThwarting" />
+    <part Name="Commerce" Value="690" />
+    <part Name="Description" Short="A mechanical mask of the dread shadow which has haunted the depths of the great machine. Where it failed to save its owner it may yet provide help to another." />
+    <part Name="Physics" Weight="2" />
+    <part Name="Blackout" Radius="2" />
+    <part Name="Metal" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- Sunken Ocean Loot -->    
+  <object Name="Deep Carapace" Inherits="BaseArmor">
+    <part Name="Render" DisplayName="deep carapace" Tile="CuriousTreasures/Deep_Carapace.png" ColorString="&amp;c" DetailColor="b" RenderString="]" />
+    <part Name="Description" Short="The cast off body-plating of some undersea horror. Its crenellated ridges belie its durability." />
+    <part Name="Armor" AV="6" DV="-2" Heat="5" Cold="5" WornOn="Body" />
+    <part Name="Physics" Weight="35" />
+    <part Name="Springy" Factor="0.5" />
+    <part Name="Commerce" Value="1100" />
+	  <tag Name="EquipSound" Value="sfx_equip_armor_glass" />
+    <part Name="AddsRep" Faction="Crabs" Value="100" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+   <object Name="Deep Helmet" Inherits="BaseHelmet">
+    <part Name="Render" DisplayName="deep helmet" ColorString="&amp;o" DetailColor="W" Tile="CuriousTreasures/Deep_Helmet.png" RenderString="]" />
+    <part Name="Description" Short="A discarded relic of the eaters which once allowed the plumbing of such terrible depths as the abyss." />
+    <part Name="Armor" AV="4" DV="-3" Heat="5" Cold="5" WornOn="Head" />
+    <part Name="Commerce" Value="350" />
+    <part Name="Physics" Weight="15" />
+	  <tag Name="EquipSound" Value="sfx_equip_armor_glass" />
+    <part Name="AddsRep" Faction="Fish" Value="100" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Deep Gauntlets" Inherits="BaseGauntlet">
+    <part Name="Render" DisplayName="deep gauntlets" RenderString="]" ColorString="&amp;c" DetailColor="b" Tile="CuriousTreasures/Deep_Gauntlets.png" />
+    <part Name="Description" Short="Fragmented plating from myriad undersea creatures forged and crafted together into a formidable set of gauntlets." />
+    <part Name="Armor" AV="3" DV="0" Heat="5" Cold="5" WornOn="Hands" />
+    <part Name="Commerce" Value="350" />
+    <part Name="Physics" Weight="15" />
+    <part Name="Springy" Factor="0.5" />
+	  <tag Name="EquipSound" Value="sfx_equip_armor_glass" />
+    <part Name="AddsRep" Faction="Urchins" Value="100" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Deep Boots" Inherits="BaseBoot">
+    <part Name="Render" DisplayName="deep boots" ColorString="&amp;c" DetailColor="b" Tile="CuriousTreasures/Deep_Boots.png" RenderString="]" />
+    <part Name="Description" Short="The shells of fallen snails have been grafted together with fish scales into boots fit for making war amidst the waves." />
+    <part Name="Physics" Weight="20" />
+    <part Name="Springy" Factor="0.5" />
+    <part Name="Armor" AV="3" DV="0" Heat="5" Cold="5" WornOn="Feet" />
+    <part Name="Commerce" Value="350" />
+    <part Name="AddsRep" Faction="Mollusks" Value="100" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Deep Shell" Inherits="BaseShield">
+    <part Name="Render" DisplayName="deep clam shell" Tile="CuriousTreasures/Clam_Shell.png" ColorString="&amp;y" DetailColor="Y" />
+    <part Name="Shield" AV="6" DV="-1" WornOn="Hand" />
+    <part Name="Description" Short="The gnarled, timeworn half-shell of a giant clam." />
+    <part Name="Commerce" Value="250" />
+    <part Name="Physics" Weight="20" Organic="true" />
+    <removepart Name="Metal" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Deep Cudgel" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="benthic shell club" Tile="CuriousTreasures/Deep_Club.png" ColorString="&amp;y" DetailColor="c" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="7" BaseDamage="3d4" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="375" />
+    <part Name="Description" Short="A bivalve shell of brutal strength fit for crushing armored beasts." />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999" />    
+    <tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_oneHanded_crysteel_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_crysteel_blocked" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_bludgeon_glass" />
+  </object>
+  <object Name="Deep Warhammer" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="conch warhammer" Tile="CuriousTreasures/Deep_Hammer.png" ColorString="&amp;y" DetailColor="C" />
+    <part Name="MeleeWeapon" PenBonus="1" MaxStrengthBonus="7" BaseDamage="2d6+3" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="375" />
+    <part Name="Description" Short="Once mighty snails were harvested for flesh and shell for the eater nobles. Now their discarded shells are crafted into clubs for killing their kin." />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" Weight="9" UsesTwoSlots="true" FlameTemperature="9999" VaporTemperature="9999" />    
+    <tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_crysteel_swing"></tag>
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_crysteel_blocked" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_bludgeon_glass" />
+  </object>
+  <object Name="Deep Axe" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="crab axe" Tile="CuriousTreasures/Deep_Axe.png" ColorString="&amp;r" DetailColor="w" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="7" BaseDamage="1d6+3" />
+    <part Name="Commerce" Value="375" />
+    <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999" />
+    <part Name="Description" Short="Spider crabs crawled and migrated across the ocean depths now vanished into the west. Their vicious claws serve still as weapons among their brethren." />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+		<tag Name="SwingSound" Value="Sounds/Melee/axes/sfx_melee_axe_crysteel_swing" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_axe_glass" />
+  </object>
+  <object Name="Deep Greataxe" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="abyssal crab axe" Tile="CuriousTreasures/Deep_Greataxe.png" ColorString="&amp;o" DetailColor="w" />
+    <part Name="MeleeWeapon" PenBonus="1" MaxStrengthBonus="7" BaseDamage="2d6+2" />
+    <part Name="Commerce" Value="375" />
+    <part Name="Description" Short="In the farthest depths of the sea dwell creatures of horror best left unimagined. The broken armor left behind from their wars are highly coveted to be made into weapons for lesser causes." />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" Weight="9" UsesTwoSlots="true" FlameTemperature="99999" VaporTemperature="9999" />
+		<tag Name="SwingSound" Value="Sounds/Melee/axes/sfx_melee_halberd_crysteel_swing" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_axe_glass" />
+  </object>
+  <object Name="Deep Long Sword" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="sharktooth blade" Tile="CuriousTreasures/Deep_Fang.png" ColorString="&amp;Y" DetailColor="c" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="7" BaseDamage="3d4" Skill="LongBlades" />
+    <part Name="Commerce" Value="375" />
+    <part Name="Description" Short="Ancient sharks once hunted the oceans for prey of prodigious size. Their fossilized teeth are deadly still in the right hands or pseudopods." />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" Weight="4" FlameTemperature="9999" VaporTemperature="9999" />
+    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_crysteel_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_crysteel_blocked" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_blade_long_glass" />
+  </object>
+  <object Name="Deep Great Sword" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="lobsterspine sword" Tile="CuriousTreasures/Deep_Spinesword.png" ColorString="&amp;w" DetailColor="Y" />
+    <part Name="MeleeWeapon" PenBonus="2" MaxStrengthBonus="7" BaseDamage="2d8" Skill="LongBlades" />
+    <part Name="Commerce" Value="375" />
+    <part Name="Description" Short="Great spined lobsters once swarmed in abundance in the oceans to be feasted upon by the eaters of old. Their wars brought them low and all that is left of them are weapons and armor forged of their discarded shells." />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" Weight="8" FlameTemperature="99999" VaporTemperature="9999" UsesTwoSlots="true" />
+    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_crysteel_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_crysteel_blocked" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_blade_long_glass" />
+  </object>
+
+  <object Name="Limulicron Horn" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="limulicron horn" Tile="CuriousTreasures/limulicron_horn.png" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="2d6" />
+    <part Name="Commerce" Value="1500" />
+    <part Name="Description" Short="The dreadful horn rendered from the body of a fallen limulicron." />
+    <part Name="Physics" Weight="5" Organic="true"/>
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+    <object Name="Wild Coconut" Inherits="Food">
+    <part Name="Render" DisplayName="{{w|wild coconut}}" ColorString="&amp;w" DetailColor="Y" Tile="CuriousTreasures/Wild_Coconut.png" RenderString="'" RenderLayer="5" />
+    <part Name="Physics" Category="Meds" />
+    <part Name="Food" Thirst="5000" Healing="150" Message="Milky and delicious." />
+    <part Name="Description" Short="A hairy vessel filled with delicious milky flesh." />
+    <part Name="Commerce" Value="300" />
+    <tag Name="LivePlant" />
+		<stag Name="Medical" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Cavitation Pistol" Inherits="BasePistol">
+    <part Name="Render" DisplayName="{{Y|cavitation pistol}}" ColorString="&amp;y" RenderString="*" DetailColor="Y" Tile="CuriousTreasures/Cavitation_Pistol.png"/>
+    <part Name="Description" Short="The dismembered pincer of a pistol shrimp repurposed into a weapon for mortal use." />
+    <part Name="Commerce" Value="350" />
+    <part Name="Physics" Weight="10" Organic="true" />
+    <part Name="MissileWeapon" RangeIncrement="3" Skill="Pistol" />
+    <part Name="EnergyAmmoLoader" ChargeUse="250" ProjectileObject="ProjectileCavitationBubble" />
+    <part Name="EnergyCellSocket" SlotType="EnergyCell" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_smallGun_fire" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="ProjectileCavitationBubble" Inherits="BaseLeadSlugProjectile">
+    <part Name="Render" DisplayName="{{Y|cavitation bubble}}" ColorString="&amp;Y" />
+    <part Name="Projectile" BasePenetration="11" BaseDamage="2d6" ColorString="&amp;Y" PassByVerb="zoom" />
+    <part Name="ElementalDamage" Damage="1d8" Attributes="Heat" />
+  </object>
+
+  <object Name="Lobster Claw" Inherits="Cudgel5">
+    <part Name="Render" DisplayName="{{r|lobster}} claw" Tile="CuriousTreasures/Lobster_Claw.png" ColorString="&amp;r" DetailColor="R" />
+    <part Name="MeleeWeapon" HitBonus="0" PenBonus="1" MaxStrengthBonus="9" BaseDamage="2d4+3" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="500" />
+    <part Name="Description" Short="The dismembered pincer of a once mighty lobster of the forgotten waters." />
+    <part Name="Physics" Weight="25" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+     <tag Name="Tier" Value="7" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>	
+
+  <object Name="Angler Bracelet" Inherits="BaseUtilityBracelet">
+    <part Name="Render" DisplayName="angler bracelet" Tile="CuriousTreasures/Angler_Bracelet.png" ColorString="&amp;k" TileColor="&amp;C" DetailColor="c"/>
+    <part Name="Description" Short="The withered remnant of an abyssal angler fish." />
+    <part Name="Physics" Weight="1" Organic="true" />
+    <part Name="Commerce" Value="250" />
+    <part Name="Springy" Factor="0.5" />
+    <part Name="LightSource" Lit="true" Radius="6" />
+    <part Name="NightVision" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Shark Skin Suit" Inherits="BaseArmor">
+    <part Name="Armor" AV="3" DV="5" WornOn="Body" />
+    <part Name="Render" DisplayName="{{B|shark-skin}} suit" RenderString="]" ColorString="&amp;B" DetailColor="K" Tile="CuriousTreasures/Sharkskin_Suit.png" />
+    <part Name="Commerce" Value="770" />
+    <part Name="Description" Short="The skin of an abyssal shark was cut to a bodysuit for sneaking." />
+    <part Name="Physics" Weight="15" FlameTemperature="9999" VaporTemperature="9999" Conductivity="0" Organic="true"/>
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Springy" Factor="0.9" />
+	  <tag Name="EquipSound" Value="sfx_equip_armor_synthetic" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+ <object Name="Mindless Nachre" Inherits="BaseFloat">
+    <part Name="Armor" AV="1" DV="-1" Strength="1" Toughness="1" Agility="-1" Ego="2" Willpower="-1" Intelligence="-1" WornOn="Floating Nearby" />
+    <part Name="Render" DisplayName="{{mindless|mindless nachre}}" RenderString="*" RenderLayer="5" Tile="CuriousTreasures/Mindless_Nachre.png" ColorString="&amp;m" TileColor="&amp;G" DetailColor="g" />
+    <part Name="Commerce" Value="900" />
+    <part Name="Description" Short="The shattered core a fallen undersea sorcerer now bound to serve its destroyer." />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <stag Name="Floating" />
+    <part Name="Physics" Weight="1" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+  </object>
+
+ <object Name="Thorned Nachre" Inherits="BaseFloat">
+    <part Name="Armor" AV="2" DV="-3" WornOn="Floating Nearby" />
+    <part Name="Render" DisplayName="{{thorned|thorned nachre}}" RenderString="*" RenderLayer="5" Tile="CuriousTreasures/Thorned_Nachre.png" ColorString="&amp;m" TileColor="&amp;M" DetailColor="m" />
+    <part Name="Commerce" Value="2000" />
+    <part Name="Description" Short="The shattered core a slain star-beast filled with the power of all the lives unlived and lives stolen by the monster who once bore it." />
+    <part Name="MutationOnEquip" ClassName="Regeneration" Level="4"/>
+    <tag Name="Tier" Value="7" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <stag Name="Floating" />
+    <part Name="Physics" Weight="1" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+  </object>
+
+  <object Name="Scallop Shell" Inherits="BaseShield">
+    <part Name="Render" DisplayName="{{K|scallop}} shell" Tile="CuriousTreasures/scallop_shell.png" ColorString="&amp;K" DetailColor="k" />
+    <part Name="Shield" AV="4" DV="-3" WornOn="Arm" />
+    <part Name="Description" Short="The ruined armor of a slain mollusc prepared to defend a new master." />
+    <part Name="Commerce" Value="550" />
+    <part Name="Physics" Weight="15" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Squid Beak" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="squid beak" Tile="CuriousTreasures/squid_beak.png" ColorString="&amp;K" DetailColor="y"/>
+    <part Name="MeleeWeapon" MaxStrengthBonus="9" BaseDamage="1d8" Skill="Axe" Stat="Strength" Slot="Face" />
+    <part Name="Commerce" Value="1000" />
+    <part Name="Description" Short="The terrible beak of a true terror of the underocean. Strength lies within to slay even the mighty titans of old." />
+    <tag Name="Tier" Value="7" />
+    <part Name="Physics" Weight="10" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Dread Harpoon" Inherits="Item">
+    <part Name="Render" DisplayName="harpoon" RenderString="\" ColorString="&amp;w" Tile="CuriousTreasures/Harpoon.png" DetailColor="y" Occluding="false" />
+    <part Name="Physics" Weight="5" Takeable="true" Solid="false" Category="Thrown Weapons" Organic="true"/>
+    <part Name="Description" Short="A terrible weapon which has been the doom of many an unwary man and beast in the dark waters." />
+    <part Name="ThrownWeapon" Damage="2d12" Penetration="13" Attributes="Axe" />
+		<part Name="PoisonOnHit" Chance="100" />
+	  <tag Name="EquipSound" Value="sfx_equip_weapon_thrown_bladed" />
+    <tag Name="Mods" Value="None" />
+    <stag Name="Thrown" />
+    <part Name="Commerce" Value="100" />
+		<stag Name="Contemporary" />
+	  <xtagThrowVFX
+			  Speed="300"
+			  Orientation="45"
+			  Rotation="1440"
+			  TrailOrigin="6,0"
+			  TrailColor="Detail"
+			  TrailStartWidth="2"
+			  TrailLife="0.075"
+			  Flip="H"
+			  Slant="True"
+			  Curve="-6"
+			  Arc="6"
+			  Easing="SineInOut"
+	  />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Jaws of the Shark God" Inherits="BaseHelmet">
+    <part Name="Armor" AV="4" DV="1" Agility="2" WornOn="Head" />
+    <part Name="MeleeWeapon" HitBonus="2" MaxStrengthBonus="9999" BaseDamage="4d2" Skill="Axe" Stat="Strength" Slot="Head"/>
+    <part Name="Render" DisplayName="{{W|Jaws}} of the {{Y|Shark God}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Jaws_ofthe_SharkGod.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints the rendered and rigored jaws of the dead ocean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+    <part Name="Physics" Weight="60" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <tag Name="ShowMeleeWeaponStats" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Claws of the Crab God" Inherits="BaseGlove">
+    <part Name="Armor" AV="4" DV="-1" Strength="2" WornOn="Hands" />
+    <part Name="MeleeWeapon" PenBonus="2" MaxStrengthBonus="9999" BaseDamage="2d4" Skill="Cudgel" Stat="Strength" Slot="Hands"/>
+    <part Name="Render" DisplayName="{{W|Claws}} of the {{Y|Crab God}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Claws_ofthe_CrabGod.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints the dismembered and hollowed claws of the dead ocean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+    <part Name="Physics" Weight="120" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <tag Name="ShowMeleeWeaponStats" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Shell of the Snail God" Inherits="BaseArmor">
+    <part Name="Armor" AV="10" Willpower="2" DV="1" Heat="15" Cold="25" Acid="15" Elec="5" WornOn="Body" />
+    <part Name="Render" DisplayName="{{W|Shell}} of the {{Y|Snail God}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Shell_ofthe_SnailGod.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints the empty former home of the dead ocean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+    <part Name="Physics" Weight="120" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Core of the Echinoderm God" Inherits="Armor">
+    <part Name="Armor" AV="1" Toughness="2" DV="1" Heat="5" Cold="5" Acid="5" Elec="5" WornOn="Floating Nearby" />
+    <part Name="Render" DisplayName="{{W|Core}} of the {{Y|Echinoderm God}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Core_ofthe_EchinodermGod.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints the shattered core of the dead ocean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+    <part Name="Physics" Weight="30" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <part Name="MutationOnEquip" ClassName="Regeneration" Level="10"/>
+    <stag Name="Floating" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+
+  <!-- Ancient City Loot -->     
+  <object Name="Shadowed Hauberk" Inherits="BaseArmor">
+    <part Name="Render" DisplayName="ancient hauberk" Tile="CuriousTreasures/Shadowed_Plate.png" ColorString="&amp;r" TileColor="&amp;K" DetailColor="r" RenderString="]" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This is a hauberk which shielded the weak flesh of the tyrants of old." />
+    <part Name="Armor" AV="8" DV="-6" WornOn="Body" />
+    <part Name="Physics" Weight="45" />
+    <part Name="Commerce" Value="4000" />
+    <tag Name="Tier" Value="8" />
+	  <tag Name="EquipSound" Value="sfx_equip_metal_quantum" />
+    <tag Name="Role" Value="Rare" />
+		<stag Name="Historical" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Gauntlets" Inherits="BaseGlove">
+    <part Name="Render" DisplayName="ancient gauntlets" RenderString="]" ColorString="&amp;r" TileColor="&amp;K" DetailColor="r" Tile="CuriousTreasures/Shadowed_Gauntlets.png" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. These are the gauntlets by whose iron fists the will of the mighty was known." />
+    <part Name="Armor" AV="4" DV="-1" WornOn="Hands" />
+    <part Name="Physics" Weight="15" />
+    <part Name="Commerce" Value="1200" />
+    <tag Name="DynamicObjectsTable:Filth" />
+	  <tag Name="EquipSound" Value="sfx_equip_armor_metal_quantum" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Warboots" Inherits="BaseBoot">
+    <part Name="Render" DisplayName="ancient warboots" ColorString="&amp;r" TileColor="&amp;K" DetailColor="r" Tile="CuriousTreasures/Shadowed_Boots.png" RenderString="]" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. These are the boots which stamped out dissenters who sought to rise against the conquerors." />
+    <part Name="Armor" AV="4" DV="-1" WornOn="Feet" />
+    <part Name="Physics" Weight="15" />
+    <part Name="Commerce" Value="1200" />
+    <tag Name="DynamicObjectsTable:Filth" />
+	  <tag Name="EquipSound" Value="sfx_equip_armor_metal_quantum" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Helm" Inherits="BaseHelmet">
+    <part Name="Render" DisplayName="ancient warhelm" ColorString="&amp;r" TileColor="&amp;K" DetailColor="r" Tile="CuriousTreasures/Shadowed_Helm.png" RenderString="]" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This helm's terrible visage is a grim reminder of the time of its makers." />
+    <part Name="Armor" AV="4" DV="-1" WornOn="Head" />
+    <part Name="Commerce" Value="1200" />
+    <part Name="Physics" Weight="10" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="DynamicObjectsTable:Headwear" />
+    <tag Name="Role" Value="Rare" />
+	  <tag Name="EquipSound" Value="sfx_equip_armor_metal_quantum" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Mace" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="ancient warhammer" Tile="CuriousTreasures/Shadowed_Hammer.png" ColorString="&amp;K" DetailColor="r" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="10" BaseDamage="2d6" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="1200" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This warhammer once crushed the helms of knights and peasantry alike." />
+    <part Name="Metal" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" Weight="7" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Tier" Value="8" />    
+    <tag Name="Role" Value="Rare" />
+    <tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_onehanded_zetachrome_swing" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_bludgeon_quantum" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Morningstar" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="ancient morningstar" Tile="CuriousTreasures/Shadowed_Morningstar.png" ColorString="&amp;r" DetailColor="K" />
+    <part Name="MeleeWeapon" PenBonus="1" MaxStrengthBonus="10" BaseDamage="3d8" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="1200" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This morningstar whirls a deadly dance of death, its wielder at the same terrible risk as its victim." />
+    <part Name="Metal" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Tier" Value="8" />
+    <part Name="Physics" Weight="9" UsesTwoSlots="true" FlameTemperature="99999" VaporTemperature="9999" />    
+    <tag Name="Role" Value="Rare" />
+		<tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_onehanded_zetachrome_swing" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_bludgeon_quantum" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Stilleto" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="ancient stilleto" Tile="CuriousTreasures/Shadowed_Stilleto.png" ColorString="&amp;K" DetailColor="r" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="10" BaseDamage="1d12" />
+    <part Name="ThrownWeapon" Penetration="10" Damage="1d12" Attributes="ShortBlades" />
+    <part Name="Commerce" Value="1100" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This wicked blade was used to end the life of armored nobles who thought their titles gave them safety." />
+    <part Name="Metal" />
+    <part Name="Physics" Weight="2" FlameTemperature="99999" VaporTemperature="9999" />
+	  <tag Name="SwingSound" Value="Sounds/Melee/shortBlades/sfx_melee_dagger_zetachrome_swing"/>
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_blade_short_quantum" />
+    <tag Name="NoAIEquipAsThrownWeapon" />
+    <tag Name="HideThrownWeaponPerformance" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Axe" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="ancient cleaver" Tile="CuriousTreasures/Shadowed_Axe.png" ColorString="&amp;K" DetailColor="r" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="10" BaseDamage="1d8+2" />
+    <part Name="Commerce" Value="1200" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This cruel axe shorn apart armor and flesh with ready hatred." />
+    <part Name="Metal" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" Weight="5" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+		<tag Name="SwingSound" Value="Sounds/Melee/axes/sfx_melee_halberd_zetachrome_swing" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_axe_quantum" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Greataxe" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="ancient executioner's axe" Tile="CuriousTreasures/Shadowed_Greataxe.png" ColorString="&amp;K" DetailColor="r" />
+    <part Name="MeleeWeapon" PenBonus="1" MaxStrengthBonus="10" BaseDamage="1d8+4" />
+    <part Name="Commerce" Value="1500" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This great axe was used not for war but for the ending of those deemed criminal by the tyrants of old." />
+    <part Name="Metal" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Tier" Value="8" />
+    <part Name="Physics" Weight="9" UsesTwoSlots="true" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Role" Value="Rare" />		
+		<tag Name="SwingSound" Value="Sounds/Melee/axes/sfx_melee_halberd_zetachrome_swing" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_axe_quantum" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Long Sword" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="ancient dueling blade" Tile="CuriousTreasures/Shadowed_Sword.png" ColorString="&amp;K" DetailColor="r" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="10" BaseDamage="2d6+2" Skill="LongBlades" />
+    <part Name="Commerce" Value="1200" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This cruel sword was used for duels of honor among the dishonorable nobles of that era." />
+    <part Name="Metal" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Tier" Value="8" />
+    <part Name="Physics" Weight="4" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_zetachrome_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_zetachrome_blocked" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_blade_long_quantum" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Greatsword" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="ancient greatsword" Tile="CuriousTreasures/Shadowed_Greatsword.png" ColorString="&amp;K" DetailColor="r" />
+    <part Name="MeleeWeapon" PenBonus="1" MaxStrengthBonus="10" BaseDamage="2d10+2" Skill="LongBlades" />
+    <part Name="Commerce" Value="1200" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This brutish blade swept aside spear and shield alike to slake the bloodthirst of its master." />
+    <part Name="Metal" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Tier" Value="8" />
+    <part Name="Physics" Weight="8" FlameTemperature="99999" VaporTemperature="9999" UsesTwoSlots="true" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_zetachrome_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_zetachrome_blocked" />
+	  <tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_blade_long_quantum" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+  </object>
+
+  <object Name="Shadowed Shield" Inherits="BaseShield">
+    <part Name="Render" DisplayName="ancient bulwark" Tile="CuriousTreasures/Shadowed_Bulwark.png" ColorString="&amp;K" DetailColor="r" />
+    <part Name="Shield" AV="8" DV="-5" WornOn="Hand" />
+    <part Name="Description" Short="In the dark of the earth forbidden star metals were forged by the heat of magma and quenched in human blood. This bulwark cast aside blades and arrows alike to spare the life of its master." />
+    <part Name="Commerce" Value="750" />
+    <part Name="Physics" Weight="40" Organic="true" />
+    <tag Name="Tier" Value="8" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:-25"/>
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+    <object Name="Spore Fruit" Inherits="Food">
+    <part Name="Render" DisplayName="{{c|spore fruit}}" ColorString="&amp;c" DetailColor="G" Tile="CuriousTreasures/Spore_Fruit.png" RenderString="'" RenderLayer="5" />
+    <part Name="Physics" Category="Meds" />
+    <part Name="Food" Thirst="10000" Healing="250" Message="A strangle medley of incomprehensible flavors drawn forth from the myriad rotting things of the ancient ruins." />
+    <part Name="Description" Short="A fleshy spore sac plundered from a fallen fungus of great power." />
+    <part Name="Commerce" Value="700" />
+    <tag Name="LivePlant" />
+		<stag Name="Medical" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Spider Silk" Inherits="Item">
+    <part Name="Render" DisplayName="{{Y|spider silk}}" Tile="CuriousTreasures/Spider_Silk.png" ColorString="&amp;Y" DetailColor="y" RenderString="*" RenderLayer="5" />
+    <part Name="Description" Short="The extracted silk of the gargantuan spiders who dwell in the ruined city. A treasure of remarkable worth." />
+    <part Name="Physics" Weight="10" Category="Trade Goods" />
+    <part Name="Commerce" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="DynamicObjectsTable:TradeGoods" />
+    <tag Name="Breakable" Value="*delete"/>
+  </object>
+
+  <object Name="Spider Egg" Inherits="Food">
+    <part Name="Render" DisplayName="{{Y|spider egg}}" Tile="CuriousTreasures/Spider_Egg.png" ColorString="&amp;Y" DetailColor="k" RenderString="*" RenderLayer="5"/>         
+<part Name="Commerce" Value="1000" />
+    <part Name="Description" Short="The greatest treasure of the mighty spiders. It contains all their possible futures and the end of mortal hope." />
+    <part Name="StatOnEat" Stats="MoveSpeed:-5" />
+    <tag Name="Gift" Value="*noinherit" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <object Name="Shadow Heart" Inherits="Food">
+    <part Name="Render" DisplayName="{{K|shadow heart}}" Tile="CuriousTreasures/Shadow_Heart.png" ColorString="&amp;K" DetailColor="r" />     
+    <part Name="Commerce" Value="2000" />
+    <part Name="Description" Short="The bleak heart of an accursed once-human now perished in flesh. Beware the promises made within." />
+    <part Name="StatOnEat" Stats="Strength:1" />
+    <tag Name="Gift" Value="*noinherit" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <object Name="Beetle Horn" Inherits="BaseAxe">
+    <part Name="Render" DisplayName="{{w|beetle}} horn" Tile="CuriousTreasures/Beetle_Horn.png" ColorString="&amp;w" DetailColor="k" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="10" BaseDamage="1d8+6" />
+    <part Name="Commerce" Value="2000" />
+    <part Name="Description" Short="Its polished chitin glimmers even in dark places where it cuts through armor as easily as flesh." />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" Weight="25" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <object Name="Worm Tooth" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="worm tooth" Tile="CuriousTreasures/Worm_Tooth.png" ColorString="&amp;Y" DetailColor="y" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="10" BaseDamage="1d12+3" />
+    <part Name="Commerce" Value="1200" />
+    <part Name="Description" Short="Where the mighty worms once burrowed in earth they have left behind only the tooth which can cut through stone." />
+    <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <object Name="Viper Mandible" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="{{R|viper}} mandible" Tile="CuriousTreasures/Viper_Mandible.png" ColorString="&amp;R" DetailColor="W" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="10" BaseDamage="2d8" Skill="LongBlades" />
+    <part Name="Physics" Weight="15" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="PoisonOnHit" Chance="80" />
+    <part Name="Commerce" Value="2000" />
+    <part Name="Description" Short="The long edge still blazes with the venom of the dread centipede from which this was shorn." />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <object Name="Wormskin cloak" Inherits="BaseCloak">
+    <part Name="Armor" AV="0" DV="3" WornOn="Back" />
+    <part Name="Render" DisplayName="wormskin cloak" Tile="CuriousTreasures/Wormskin_Cloak.png" ColorString="&amp;w" DetailColor="m" RenderString="]" />
+    <part Name="Commerce" Value="2200" />
+    <part Name="Description" Short="The slick skin of worms has been rent into a fleshly cloak. The earth slips away in your wake." />
+    <part Name="MutationOnEquip" ClassName="BurrowingClaws" Level="4"/>
+    <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Springy" Factor="0.9" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <object Name="Mask of the Hive God" Inherits="BaseArmor">
+    <part Name="Armor" AV="1" Ego="6" DV="1" WornOn="Face" />
+    <part Name="AddsRep" Faction="*allvisiblefactions:50"/>
+    <part Name="Render" DisplayName="{{W|Visage}} of the {{Y|Hive God}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Face_ofthe_HiveGod.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints the broken visage of the dead subterranean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+    <part Name="Physics" Weight="15" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Pelt of the Mabaloth" Inherits="BaseCloak">
+    <part Name="Armor" AV="3" SpeedBonus="5" Strength="5" DV="-3" WornOn="Back" />
+    <part Name="Render" DisplayName="{{W|Pelt}} of the {{Y|Mabaloth}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Pelt_ofthe_Mabaloth.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints the matted fur of the dead subterranean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+    <part Name="Physics" Weight="45" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Boots of the Worm God" Inherits="BaseBoot">
+    <part Name="Armor" AV="6" Intelligence="1" DV="1" WornOn="Feet" />
+    <part Name="Render" DisplayName="{{W|Boots}} of the {{Y|Worm God}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Boots_ofthe_WormGod.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="EquipIntProperties" Props="AllMutationLevelModifier:1;CyberneticsLicenses:6;FreeCyberneticsLicenses:6" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints the cloven and stitched skin boots of the dead subterranean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+		<part Name="RulesDescription" Text="+1 to all mutation levels&#10;+6 to cybernetics license tier" />
+    <part Name="Physics" Weight="60" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Armlet of the Spider God" Inherits="BaseArmlet">
+    <part Name="Armor" AV="3" SpeedBonus="10" DV="3" WornOn="Arm" />
+    <part Name="MeleeWeapon" PenBonus="1" MaxStrengthBonus="9999" BaseDamage="2d2" Skill="Shortblades" Stat="Strength" Slot="Arm"/>
+    <part Name="Render" DisplayName="{{W|Armlet}} of the {{Y|Spider God}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Armlet_ofthe_SpiderGod.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints the corded fangs of the dead subterranean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+    <part Name="Physics" Weight="15" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <tag Name="ShowMeleeWeaponStats" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Tendril of the Spore God" Inherits="BaseHeavyWeapon">
+    <part Name="Render" DisplayName="{{W|Tendril}} of the {{Y|Spore God}}" RenderString="]" ColorString="&amp;M" DetailColor="W" Tile="CuriousTreasures/Tendril_ofthe_SporeGod.png" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="MissileWeapon" Skill="Rifle" AmmoChar="&amp;C~" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="4" />
+    <part Name="EnergyAmmoLoader" ChargeUse="500" ProjectileObject="ProjectileSporeTendril" />
+    <part Name="CooldownAmmoLoader" Cooldown="2" Readout="true" />
+    <part Name="EnergyCellSocket" SlotType="EnergyCell" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Rifles/sfx_missile_spaserRifle_fire" />
+    <tag Name="ReloadSound" Value="Sounds/Missile/Reloads/sfx_missile_energyWeapon_reload" />
+    <part Name="Description" Short="Lifeblood the color of glistening honey and dried in moonlight paints budding fragment of the dead subterranean Saad. The sight of it unfurls one of Time's right-blown ribbons: this is a relic in all or near-all futures, and the wielder perhaps =pronouns.possessive= fossil-mate and secret sharer." />
+    <part Name="Physics" Weight="90" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Mods" Value="None" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="ProjectileSporeTendril" Inherits="TemporaryProjectile">
+    <part Name="Render" DisplayName="{{Y|spore}}" ColorString="&amp;R" />
+    <part Name="Projectile" BasePenetration="15" BaseDamage="5d8" ColorString="&amp;C" PassByVerb="hum" />
+    <part Name="EmitGasOnHit" GasBlueprint="FungalSporeGasLuminous" CellDensity="200" AdjacentDensity="100" />
+    <tag Name="ImpactSound" Value="Sounds/Missile/Hits/sfx_missile_directEnergy_hit" />
+  </object>
+
+
+  <!-- Steppe Features -->     
+<object Name="Grass Wall" Inherits="Wall">
+    <part Name="Render" DisplayName="prairie wall" Tile="CuriousTreasures/GrassWall.png" ColorString="&amp;g" DetailColor="r"/>
+    <part Name="Physics" Weight="15000" FlameTemperature="15000" VaporTemperature="58000" Takeable="false" Solid="true" />
+    <stat Name="AV" Value="20" />
+    <stat Name="Hitpoints" Value="100" />
+    <part Name="Description" Short="Piled earth and deep grass roots form a gnarled mass heaped high." />
+		<tag Name="PaintedWall" Value="*delete" />
+    <stat Name="HeatResistance" Value="35" />
+    <stat Name="ColdResistance" Value="75" />
+    <tag Name="ImmutableWhenUnexplored" Value="1" />
+    <xtagGrammar massNoun="true" />
+  </object>
+  <object Name="Cedar" Inherits="SolidTree">
+    <part Name="Render" DisplayName="cedar" RenderString="244" Tile="BestiaryTerrain/Cedar.png" ColorString="&amp;r" TileColor="&amp;r" DetailColor="g" Occluding="true" />
+    <part Name="Description" Short="Towering king of the old forests that once sprawled across primordial Qud. No less majestic in solitude and a crown upon the crags." />
+    <tag Name="HangingSupport" />
+  </object>
+  <object Name="Blade Grass" Inherits="Plant">
+    <part Name="Render" DisplayName="bladegrass" RenderString="161" ColorString="&amp;w" Tile="BestiaryTerrain/bladegrass.png" TileColor="&amp;g" DetailColor="r"  Occluding="true" />
+    <part Name="Description" Short="Such hardy grass truly typifies the term often used to describe stems of grass. Lesser grass cannot truly be called blades, these can assuredly be described in such terms." />
+    <xtagGrammar iArticle="some" adjunctNoun="clump" />
+  </object>  
+  <object Name="Grass Clump" Inherits="Plant">
+    <part Name="Render" DisplayName="grass clump" RenderString="161" ColorString="&amp;w" Tile="BestiaryTerrain/GrassClump.png" TileColor="&amp;r" DetailColor="g"  />
+    <part Name="Description" Short="A clump of hardy steppe grass." />
+    <xtagGrammar iArticle="some" adjunctNoun="patch" />
+  </object>  
+  <object Name="Lichen Clump" Inherits="Plant">
+    <part Name="Render" DisplayName="lichen clump" RenderString="161" ColorString="&amp;w" Tile="BestiaryTerrain/LichenClump.png" TileColor="&amp;y" DetailColor="g"  />
+    <part Name="Description" Short="A colony of lichen sprawled across a small boulder." />
+    <stat Name="AV" Value="10" />
+    <stat Name="Hitpoints" Value="50" />
+    <xtagGrammar iArticle="some" adjunctNoun="clump" />
+  </object>  
+  <object Name="Thistle Flower" Inherits="Plant">
+    <part Name="Render" DisplayName="thistle" RenderString="161" ColorString="&amp;w" Tile="BestiaryTerrain/Thistle.png" TileColor="&amp;g" DetailColor="m"  />
+    <part Name="Description" Short="A rare spot of color in a sea of grass, the little thorny flowers flow with the breeze." />
+    <xtagGrammar iArticle="some" adjunctNoun="clump" />
+  </object>  
+  <object Name="Ruined Simian Wall" Inherits="SimianWall">
+    <part Name="Render" DisplayName="ruined simian wall" Tile="CuriousTreasures/BaboonWall.png" ColorString="&amp;W" DetailColor="w"/>
+    <part Name="Description" Short="Carved from some ancient stone and glyphed with shattered illustrations of simian scrawlings." />
+  </object>
+
+  <!-- Steppe Loot -->     
+
+  <object Name="Bugblade" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="{{g|bug}} blade" Tile="CuriousTreasures/Bugblade.png" ColorString="&amp;g" DetailColor="y"/>
+    <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="2d4" />
+    <part Name="Commerce" Value="80" />
+    <part Name="Description" Short="A blade of crude metal housed in chitin." />
+    <tag Name="Tier" Value="8" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Orcish Mail" Inherits="BaseArmor">
+    <part Name="Armor" AV="7" DV="-7" WornOn="Body" />
+    <part Name="Render" DisplayName="{{r|orcish}} mail" ColorString="&amp;y" RenderString="]" Tile="CuriousTreasures/Orcish_Mail.png" DetailColor="r" />
+    <part Name="Commerce" Value="300" />
+    <part Name="Description" Short="Crudely forged yet remarkably tough iron alloyed armor made in the fabled forges of Ogmag in the frozen north. The heavy mail stinks of death." />
+    <part Name="Physics" Weight="80" />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Orcish Gauntlets" Inherits="BaseGauntlet">
+    <part Name="Armor" AV="4" DV="-4" WornOn="Hands" />
+    <part Name="Render" DisplayName="{{r|orcish}} gauntlets" RenderString="]" ColorString="&amp;y" DetailColor="r" Tile="CuriousTreasures/Orcish_Gauntlets.png" />
+    <part Name="Commerce" Value="200" />
+    <part Name="Description" Short="Crudely forged yet remarkably tough iron alloyed armor made in the fabled forges of Ogmag in the frozen north. The crude mitts are spotted with blood." />
+    <part Name="Physics" Weight="20" />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Orcish Boots" Inherits="BaseBoot">
+    <part Name="Armor" AV="4" DV="-4" WornOn="Feet" />
+    <part Name="Render" DisplayName="{{r|orcish}} boots" ColorString="&amp;y" DetailColor="r" Tile="CuriousTreasures/Orcish_Boots.png" RenderString="]" />
+    <part Name="Commerce" Value="250" />
+    <part Name="Description" Short="Crudely forged yet remarkably tough iron alloyed armor made in the fabled forges of Ogmag in the frozen north. The boots are hobnailed." />
+    <part Name="Physics" Weight="35" />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Orcish Helm" Inherits="BaseHelmet">
+    <part Name="Armor" AV="4" DV="-4" WornOn="Head" />
+    <part Name="Render" DisplayName="{{r|orcish}} helm" RenderString="]" ColorString="&amp;y" DetailColor="r" Tile="CuriousTreasures/Orcish_Helm.png" />
+    <part Name="Commerce" Value="225" />
+    <part Name="Description" Short="Crudely forged yet remarkably tough iron alloyed armor made in the fabled forges of Ogmag in the frozen north. The helm is uncomfortably large." />
+    <part Name="Physics" Weight="20" />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Orcish Scimitar" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="{{r|orcish}} scimitar" Tile="CuriousTreasures/Orcish_Scimitar.png" ColorString="&amp;y" DetailColor="r" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="2d6" Skill="LongBlades" />
+    <part Name="Commerce" Value="400" />
+    <part Name="Description" Short="A crudely forged yet remarkably tough iron alloyed blade made in the fabled forges of Ogmag in the frozen north. The sword is cruelly dull, nearly a bludgeon without great strength behind it." />
+    <part Name="Metal" />
+    <part Name="Physics" Weight="10" FlameTemperature="99999" VaporTemperature="9999" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="SwingSound" Value="Sounds/Melee/longBlades/sfx_melee_longBlade_fullerite_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_fullerite_blocked" />
+  </object>
+  <object Name="Orcish Cudgel" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="{{r|orcish}} cudgel" Tile="CuriousTreasures/Orcish_Cudgel.png" ColorString="&amp;y" DetailColor="r"/>
+    <part Name="MeleeWeapon" MaxStrengthBonus="10" BaseDamage="3d4" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="360" />
+    <part Name="Description" Short="A mass of remarkably tough pig iron alloyed in the mysterious forges of Ogmag." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Physics" UsesTwoSlots="true" Weight="35" />    
+    <tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_fullerite_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_fullerite_blocked" />
+  </object>
+  <object Name="Orcish Shield" Inherits="BaseShield">
+    <part Name="Render" DisplayName="{{r|orcish}} shield" Tile="CuriousTreasures/Orcish_Shield.png" ColorString="&amp;y" DetailColor="r" />
+    <part Name="Shield" AV="8" DV="-5" WornOn="Hand" />
+    <part Name="Description" Short="A crudely forged yet remarkably tough iron alloyed shield made in the fabled forges of Ogmag in the frozen north. A vile sigil lies upon its face." />
+    <part Name="Commerce" Value="450" />
+    <part Name="Physics" Weight="25" />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+  <object Name="Giga Fist" Inherits="Cudgel5th">
+    <part Name="Render" DisplayName="{{c|chrome}} gigafist" Tile="CuriousTreasures/Chrome_Fist.png" ColorString="&amp;C" DetailColor="c" />
+    <part Name="MeleeWeapon" HitBonus="3" PenBonus="3" MaxStrengthBonus="15" BaseDamage="2d6" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="700" />
+    <part Name="Description" Short="The dismembered hand of a mechanical false god. Time would have eaten them eventually you have merely accelerated entropy." />
+    <part Name="Metal" />
+    <part Name="Physics" Weight="75" />
+    <part Name="Examiner" Complexity="1" Difficulty="1" />
+    <part Name="TinkerItem" Bits="0348" CanDisassemble="true" CanBuild="false" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>	
+  <object Name="Chrome Wreckage" Inherits="LargeBoulder">
+    <part Name="Render" DisplayName="chrome wreckage" Tile="CuriousTreasures/Chrome_Wreckage.png" RenderLayer="8" RenderString="007" ColorString="&amp;C" DetailColor="c"/>
+    <part Name="SizeAdjective" Adjective="large" />
+    <part Name="Physics" Weight="2000" Solid="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Description" Short="It's the shattered wreckage of a false chrome god, fragments glitter from amidst the ruin." />
+    <tag Name="NoSparkingQuest" />
+    <part Name="Metal" />
+<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <tag Name="Wall" />
+  </object>
+  <object Name="Lion Pelt" Inherits="BaseCloak">
+    <part Name="Armor" AV="1" DV="0" Strength="1" Willpower="1" Cold="20" Heat="10" WornOn="Back" />
+    <part Name="Render" DisplayName="{{W|lion}} pelt" ColorString="&amp;W" RenderString="]" Tile="CuriousTreasures/Lion_Pelt.png" DetailColor="r" />
+    <part Name="Commerce" Value="600" />
+    <part Name="Description" Short="The conquered hide of the mighty lion rendered into a pelt worthy of a champion." />
+    <part Name="Physics" Weight="25" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Fur" />
+    <part Name="AddsRep" Faction="Cats" Value="-100" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Mammoth Cloak" Inherits="BaseCloak">
+    <part Name="Armor" AV="2" DV="0" Toughness="2" Cold="40" Heat="5" WornOn="Back" />
+    <part Name="Render" DisplayName="{{w|mammoth}} cloak" ColorString="&amp;r" RenderString="]" Tile="CuriousTreasures/Mammoth_Cloak.png" DetailColor="w" />
+    <part Name="Commerce" Value="1000" />
+    <part Name="Description" Short="The butchered fur of one of nature's marvels. Only a truly cruel person would gird themselves in such a garment." />
+    <part Name="Physics" Weight="25" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Fur" />
+    <part Name="AddsRep" Faction="Prey" Value="-300" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Hellpig Bracer" Inherits="BaseArmlet">
+    <part Name="Armor" AV="2" DV="2" WornOn="Arm" />
+    <part Name="Render" DisplayName="{{R|hellpig}} armlet" RenderString="]" Tile="CuriousTreasures/Hellpig_Bracer.png" ColorString="&amp;R" DetailColor="y" />
+    <part Name="Commerce" Value="350" />
+    <part Name="Description" Short="A leather armlet decorated with the tusks of wild hellpigs." />
+    <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Roc Necklace" Inherits="BaseArmlet">
+    <part Name="Armor" AV="0" DV="1" WornOn="Arm" />
+    <part Name="Render" DisplayName="{{R|roc}} necklace" RenderString="]" Tile="CuriousTreasures/Feather_Necklace.png" ColorString="&amp;R" DetailColor="r" />
+    <part Name="Commerce" Value="350" />
+    <part Name="Description" Short="The stolen feather of a great roc." />
+    <part Name="MutationOnEquip" ClassName="HeightenedAgility" />
+    <part Name="Physics" Weight="1" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Ape tooth necklace" Inherits="BaseArmlet">
+    <part Name="Armor" AV="1" DV="0" WornOn="Arm" />
+    <part Name="Render" DisplayName="ape tooth necklace" RenderString="]" Tile="CuriousTreasures/Tooth_of_the_Ape_God.png" ColorString="&amp;Y" DetailColor="r" />
+    <part Name="Commerce" Value="900" />
+    <part Name="Description" Short="Ripped from the fallen body of a true ape to use as a token of bloody conquest over apekind." />
+    <part Name="Physics" Weight="1" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="MutationOnEquip" ClassName="HeightenedStrength" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <part Name="AddsRep" Faction="Apes" Value="-100" />
+  </object>
+  <object Name="Oryx Boots" Inherits="BaseBoot">
+    <part Name="Armor" AV="3" DV="3" Agility="1" Cold="20" WornOn="Feet" />
+    <part Name="Render" DisplayName="oryx boots" ColorString="&amp;w" DetailColor="y" Tile="CuriousTreasures/Oryx_Boots.png" RenderString="]" />
+    <part Name="Commerce" Value="350" />
+    <part Name="Description" Short="Fine leather boots made from the ironflecked hide of the mighty oryx." />
+    <part Name="Physics" Weight="15" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Fur" />
+    <part Name="MutationOnEquip" ClassName="HeightenedSpeed" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Enlightened Eye" Inherits="Armor">
+    <part Name="Armor" AV="0" DV="2" Ego="3" WornOn="Floating Nearby" />
+    <part Name="Render" DisplayName="{{O|enlightened}} eye" RenderString="]" ColorString="&amp;O" Tile="CuriousTreasures/Enlightened_Eye" DetailColor="K" />
+    <part Name="Commerce" Value="1000" />
+    <part Name="Description" Short="The eye of an enlightened ape, even separated from its host this eye floats in psychic tranquility." />
+    <part Name="Physics" Weight="1" />
+    <part Name="MutationOnEquip" ClassName="Precognition" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <stag Name="Floating" />
+  </object>
+  <object Name="Mammoth Ivory" Inherits="BaseCurrency">
+    <part Name="Render" DisplayName="mammoth ivory" Tile="CuriousTreasures/Mammoth_Ivory" DetailColor="y" ColorString="&amp;Y" />
+    <part Name="Description" Short="The shining tusk of what was once a mighty wanderer of the north, now little more than a weighty bauble." />
+    <part Name="Commerce" Value="10000" />    
+    <part Name="Physics" Weight="100" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Bear Tooth" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="beartooth wristblade" Tile="CuriousTreasures/Bear_Tooth.png" ColorString="&amp;Y" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="9" BaseDamage="2d4" Slot="Arm" />
+    <part Name="Commerce" Value="300" />
+    <part Name="Description" Short="A ribbon of bestial leather is looped around the base of a natural blade of ursine tooth." />
+    <tag Name="SwingSound" Value="Sounds/Melee/shortBlades/sfx_melee_foldedCarbide_wristblade_swing" />
+    <tag Name="Tier" Value="8" />
+    <part Name="Physics" Weight="1" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Princeling Crown" Inherits="BaseHelmet">
+    <part Name="Armor" AV="2" DV="5" Ego="2" WornOn="Head" />
+    <part Name="Render" DisplayName="{{W|princeling's}} crown" RenderString="]" ColorString="&amp;W" DetailColor="b" Tile="CuriousTreasures/Princeling_Crown.png" />
+    <part Name="Commerce" Value="900" />
+    <part Name="Description" Short="Forged from pure river bed gold and decorated with saphires. It radiates uncanny charisma." />
+    <part Name="Physics" Weight="5" />
+    <part Name="Metal" />
+    <part Name="MutationOnEquip" ClassName="Beguiling" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Wolf Helm" Inherits="BaseHelmet">
+    <part Name="Render" DisplayName="wolf helm" ColorString="&amp;y" DetailColor="w" Tile="CuriousTreasures/Wolf_Helm.png" RenderString="]" />
+    <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Description" Short="The ruined head of a mighty warg now forged into a helm for war." />
+    <part Name="Armor" AV="3" DV="0" WornOn="Head" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="9" Slot="Head" BaseDamage="1d6" Stat="Strength" Skill="ShortBlades" />
+    <part Name="Commerce" Value="325" />
+    <part Name="AddsRep" Faction="dogs" Value="100" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="ShowMeleeWeaponStats" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="BaseObject" Value="*noinherit" />
+  </object>
+  <object Name="Wretched Cloak" Inherits="BaseCloak">
+    <part Name="Armor" AV="2" DV="2"  Cold="15" Heat="15" WornOn="Back" />
+    <part Name="Render" DisplayName="{{w|wretched}} cloak" ColorString="&amp;W" RenderString="]" Tile="CuriousTreasures/Wretched_Cloak.png" DetailColor="w" />
+    <part Name="Commerce" Value="1000" />
+    <part Name="Description" Short="The butchered remnants of one of nature's mistakes. It smells odd and is sickening to look upon." />
+    <part Name="Physics" Weight="35" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <part Name="Fur" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <tag Name="Role" Value="Rare" />
+    <part Name="MutationOnEquip" ClassName="FearAura" />
+  </object>
+  <object Name="Tarantula Fang" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="{{G|tarantula}} fang" Tile="CuriousTreasures/Tarantula_Fang.png" ColorString="&amp;G" DetailColor="y"/>
+    <part Name="MeleeWeapon" PenBonus="2" MaxStrengthBonus="9" BaseDamage="1d12" />
+		<part Name="PoisonOnHit" Chance="100" />
+    <part Name="Commerce" Value="280" />
+    <part Name="Description" Short="A venom dripping fang of a fallen tarantula." />
+    <tag Name="Tier" Value="8" />
+    <part Name="Physics" Weight="3" FlameTemperature="9999" VaporTemperature="9999" Organic="true" />
+    <stat Name="Hitpoints" Value="1000" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+  <object Name="Musada Pistol" Inherits="BaseMagazinePistol">
+    <part Name="Render" DisplayName="Musada pistol" Tile="CuriousTreasures/Colt1911.png" ColorString="&amp;K" DetailColor="k" />
+    <part Name="Physics" Weight="5" />
+    <part Name="Commerce" Value="2500" />
+    <part Name="MissileWeapon" AnimationDelay="0" Skill="Pistol" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
+    <part Name="MagazineAmmoLoader" ProjectileObject="ProjectileMusada" AmmoPart="AmmoSlug" MaxAmmo="8" />
+    <part Name="Description" Short="An ancient relic of a gun older than the eaters which has served in the hands of heroes and outlaws alike since the primordial gunslingers." />
+    <part Name="Metal" />
+    <part Name="TinkerItem" Bits="0018" CanDisassemble="true" CanBuild="false" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="Role" Value="Rare" />
+    <tag Name="DynamicObjectsTable:Filth" />
+    <part Name="Examiner" Complexity="3" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_smallGun_fire" />
+  </object>
+  <object Name="ProjectileMusada" Inherits="BaseLeadSlugProjectile">
+    <part Name="Projectile" BasePenetration="4" BaseDamage="2d6" Attributes="Vorpal" ColorString="&amp;B" PassByVerb="bullet" />
+  </object>
+  <object Name="Mossflower" Inherits="Item">
+    <part Name="Render" DisplayName="moss flower" ColorString="&amp;r" DetailColor="W" RenderString="." Tile="CuriousTreasures/MossFlower.png" />
+    <part Name="Description" Short="The bloom of a mossy mound." />
+    <part Name="Physics" Weight="0" />
+    <part Name="Commerce" Value="700" />
+    <part Name="FractionalWeight" Weight="0.02" />
+    <xtagGrammar adjunctNoun="bunch" massNoun="true" />
+    <tag Name="NoThinWorldHologram" />
+    <stag Name="Beauty" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="DynamicObjectsTable:Filth" />
+  </object>
+
+
+
+  <!-- Dream Stuff -->     
+<object Name="Golden Banana" Inherits="BaseCurrency">
+ <part Name="Render" DisplayName="{{W|golden banana}}" Tile="CuriousTreasures/GoldenBanana.png" ColorString="&amp;W" DetailColor="O"/>
+    <part Name="Description" Short="It glints in the chord of non-euclidian spaces where bananas stretch forth to infinity for the grace of ape kind." />
+		<part Name="RulesDescription" Text="Provides entry to the dangerous depths of the simian dream space." />
+<part Name="Commerce" Value="500" />
+    <part Name="Metal" />
+<part Name="Interior" Cell="Simian Dream Space" FallDistance="2" />
+<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+ </object>
+<object Name="Shimmering banana" Inherits="Stairs">
+ <part Name="Render" DisplayName="{{c|shimmering banana}}" Tile="CuriousTreasures/ShimmerBanana.png" ColorString="&amp;c" DetailColor="C"/>
+    <part Name="Description" Short="It shimmers in the essence of the quantum uncertainty of inexplicable realities where dream meats ordinary flesh." />
+		<part Name="RulesDescription" Text="Provides egress from the hallucinatory depths of the simian dream space." />
+<part Name="InteriorPortal" OpenTile="CuriousTreasures/ShimmerPortal.png" />
+<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+ </object>
+<object Name="DreamWall" Inherits="GolemInteriorWall">
+<part Name="Render" DisplayName="shimmering dreamstuff" Tile="CuriousTreasures/Dream_Wall.png" DetailColor="G"/>
+<part Name="Description" Short="The glistening edge of dreamspace slickens and warps at the sight. One cannot bear to think clearly in its presence as delusions and dreams burst forth from the heady mist of the primordial simian dream. From such a dream would emerge the eaters and their doom." />
+		<tag Name="PaintedWall" Value="*delete" />
+<part Name="HologramMaterial" ColorStrings="&amp;g,&amp;w,&amp;W,&amp;G" DetailColors="r,R,c,C" />
+	</object>
+<object Name="Dreamborn Throne" Inherits="Throne">
+ <part Name="Render" DisplayName="{{W|dreamborn throne}}" Tile="CuriousTreasures/Simian_Throne.png" ColorString="&amp;W" DetailColor="O"/>
+    <part Name="Description" Short="Ehh banana." />
+<part Name="Commerce" Value="200" />
+<tag Name="ExcludeFromDynamicEncounters" />
+ </object>
+<object Name="KhomgaBanana" Inherits="BaseCurrency">
+ <part Name="Render" DisplayName="{{R|Khomga's banana}}" Tile="CuriousTreasures/Khomga_Banana.png" ColorString="&amp;R" DetailColor="O"/>
+<part Name="Description" Short="An illusory banana which beckons deep into the dreamspace." />
+<part Name="Commerce" Value="2500" />
+<part Name="RulesDescription" Text="DO NOT USE within the dreamspace lest you be lost forever in its depths." />
+<part Name="Interior" Cell="Simian Dream City" FallDistance="2" />
+ </object>
+<object Name="ChambaMango" Inherits="BaseCurrency">
+ <part Name="Render" DisplayName="{{R|Chamba's mango}}" Tile="CuriousTreasures/Chamba_Mango.png" ColorString="&amp;W" DetailColor="G"/>
+<part Name="Description" Short="A maddened mango which beckons into the depths of the dream." />
+<part Name="Commerce" Value="2500" />
+<part Name="RulesDescription" Text="DO NOT USE within the dreamspace lest you be lost forever in its depths." />
+<part Name="Interior" Cell="Simian Dream Castle" FallDistance="2" />
+ </object>
+<object Name="SimianWall" Inherits="Wall">
+    <part Name="Render" DisplayName="simian wall" Tile="CuriousTreasures/MonkeyWall.png" ColorString="&amp;W" DetailColor="G"/>
+    <part Name="Physics" Weight="15000" FlameTemperature="25000" VaporTemperature="58000" Takeable="false" Solid="true" />
+    <stat Name="AV" Value="40" />
+    <stat Name="Hitpoints" Value="200" />
+    <part Name="Description" Short="Whether carved from some ancient stone or envisaged from raw imagination it appears before you immutable and vast. It is glyphed with detailed illustrations of simian scrawlings." />
+		<tag Name="PaintedWall" Value="*delete" />
+    <stat Name="HeatResistance" Value="75" />
+    <stat Name="ColdResistance" Value="75" />
+    <tag Name="ImmutableWhenUnexplored" Value="1" />
+    <xtagGrammar massNoun="true" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Monkey Wall" Inherits="SimianWall">
+    <part Name="Render" DisplayName="simian wall" Tile="CuriousTreasures/MonkeyWall.png" ColorString="&amp;W" DetailColor="R"/>
+    <part Name="Description" Short="Whether carved from some ancient stone or envisaged from raw imagination it appears before you immutable and vast. It is glyphed with detailed illustrations of simian scrawlings. The wall is decorated with figures of monkeys." />
+  </object>
+  <object Name="Banana Wall" Inherits="SimianWall">
+    <part Name="Render" DisplayName="simian wall" Tile="CuriousTreasures/BananaWall.png" ColorString="&amp;W" DetailColor="O"/>
+    <part Name="Description" Short="Whether carved from some ancient stone or envisaged from raw imagination it appears before you immutable and vast. It is glyphed with detailed illustrations of simian scrawlings. The wall is decorated with figures of stylized bananas." />
+  </object>
+  <object Name="Ape Wall" Inherits="SimianWall">
+    <part Name="Render" DisplayName="simian wall" Tile="CuriousTreasures/ApeWall.png" ColorString="&amp;W" DetailColor="g"/>
+    <part Name="Description" Short="Whether carved from some ancient stone or envisaged from raw imagination it appears before you immutable and vast. It is glyphed with detailed illustrations of simian scrawlings. The wall is decorated with figures of great apes." />
+  </object>
+  <object Name="Simian Scroll" Inherits="Book">
+    <part Name="Render" DisplayName="{{W|simian scroll}}" ColorString="&amp;r" RenderString="=" RenderLayer="5" Tile="CuriousTreasures/Ape_Scroll.png" TileColor="&amp;W" DetailColor="r" />
+    <part Name="Description" Short="An old scroll written upon dreamworn futures. The dreams of unrevealed poets unfurled." />
+    <part Name="Commerce" Value="350" />
+    <part Name="StandaloneMarkovBook" Chain="LibraryCorpus.json" />
+  </object>
+  <object Name="Chamba Cape" Inherits="BaseCloak">
+    <part Name="EquipIntProperties" Props="AllMutationLevelModifier:2;CyberneticsLicenses:12;FreeCyberneticsLicenses:12" />
+    <part Name="Armor" AV="2" DV="5" ToHit="+2" Agility="2" Willpower="2" Cold="30" Heat="30" WornOn="Back" />
+    <part Name="Render" DisplayName="{{W|Chamba's}} Cape" ColorString="&amp;W" RenderString="]" Tile="CuriousTreasures/Chamba_Cape.png" DetailColor="r" />
+    <part Name="Commerce" Value="3000" />
+    <part Name="Description" Short="Coarse fur is cut from the supple pelt of the dreamborn queen Chamba into a luxurious fur cape." />
+		<part Name="RulesDescription" Text="+2 to all mutation levels&#10;+12 to cybernetics license tier" />
+    <part Name="Physics" Weight="15" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="10000" />
+    <part Name="Fur" />
+    <tag Name="Tier" Value="8" />
+    <part Name="AddsRep" Faction="Baboons" Value="-200" />
+    <part Name="ModGlassArmor" Tier="8" Type="quartz" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Lauwi Hat" Inherits="BaseHat">
+    <part Name="EquipIntProperties" Props="AllMutationLevelModifier:2;CyberneticsLicenses:12;FreeCyberneticsLicenses:12" />
+    <part Name="Armor" AV="4" DV="2" Toughness="1" Strength="1" Cold="30" Heat="30" WornOn="Head" />
+    <part Name="Render" DisplayName="{{W|Lauwi's}} Hat" Tile="CuriousTreasures/Lauwi_Hat.png" ColorString="&amp;W" DetailColor="r" RenderString="]" />
+    <part Name="Commerce" Value="3000" />
+    <part Name="Description" Short="Coarse fur is cut from the thickset pelt of the dreamborn king Lauwi into a heavy ushanka." />
+		<part Name="RulesDescription" Text="+2 to all mutation levels&#10;+12 to cybernetics license tier" />
+    <part Name="Physics" Weight="8" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="10000" />
+    <part Name="Fur" />
+    <tag Name="Tier" Value="8" />
+    <part Name="AddsRep" Faction="Apes" Value="-200" />
+    <part Name="ModTwoFaced" />
+    <part Name="MutationOnEquip" ClassName="ForceBubble" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="Khomga Gauntlets" Inherits="BaseGlove">
+    <part Name="EquipIntProperties" Props="AllMutationLevelModifier:1;CyberneticsLicenses:6;FreeCyberneticsLicenses:6" />
+    <part Name="Armor" Cold="15" Heat="15" Toughness="1" Willpower="1" AV="4" DV="2" WornOn="Hands" />
+    <part Name="Render" DisplayName="{{W|Khomga's}} Gauntlets" ColorString="&amp;W" DetailColor="r" Tile="CuriousTreasures/Khomga_Gauntlet.png" RenderString="]" />
+    <part Name="Commerce" Value="300" />
+    <part Name="Description" Short="Coarse fur is cut from the thickset pelt of the dreamborn king Khomga into giant-fingered gloves, and gargantuan knuckles sawed to points stick through." />
+    <part Name="Physics" Weight="10" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+    <stat Name="Hitpoints" Value="10000" />
+    <part Name="Fur"/>
+    <part Name="GiantHands" WorksOnSelf="false" WorksOnEquipper="true"/>
+		<part Name="RulesDescription" Text="While equipped wielder may equip two handed weapons in one hand. +1 to all mutation levels&#10;+6 to cybernetics license tier." />
+    <tag Name="Tier" Value="8" />
+    <part Name="AddsRep" Faction="Apes" Value="-200" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+</objects>

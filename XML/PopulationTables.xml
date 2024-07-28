@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+
+  <!-- Steppe -->     
+  <population Name="SteppeZoneGlobals-Surface">
+    <table Name="StandardSurfaceGlobals" />
+    <table Name="SteppeZoneGlobals-Vegetation" />
+    <table Name="SteppeZoneGlobals" />
+    <table Chance="95" Number="1" Name="SteppeZoneGlobals-Creatures" />
+  </population>  
+  <population Name="SteppeZoneGlobals-Underground">    
+    <table Name="SteppeZoneGlobals-Underground-Vegetation" />
+    <table Name="SteppeZoneGlobals" />    
+  </population>
+
+  <population Name="SteppeZoneGlobals">    
+    <object Blueprint="Grassy" />    
+
+    <!-- Do better than throwing junk on the ground when we do sector encounters -->
+    <group Chance="3" Name="Junk" Style="pickone">
+      <table Name="Junk 6" />
+      <table Name="Junk 7" />
+      <table Name="Junk 8" />
+    </group>
+  </population>
+
+  <population Name="SteppeZoneGlobals-Reachable">
+    <table Chance="10" Name="Lion Cave" />
+    <table Chance="10" Name="Mammoth Graveyard" />
+    <table Chance="10" Name="FlowerPatches" />
+
+    <table Chance="95" Number="2-3" Name="SteppeZoneGlobals-Creatures" />
+
+    <group Chance="2" Name="DromadTrader" Style="pickone">
+      <object Weight="10" Blueprint="DromadTrader6" />
+      <object Weight="80" Blueprint="DromadTrader7" />
+      <object Weight="10" Blueprint="DromadTrader8" />
+    </group>    
+  </population>
+
+  <population Name="SteppeZoneGlobals-Creatures">
+    <object Chance="5" Number="2-4" Blueprint="Simian Denizen" />
+    <object Chance="5" Number="2-4" Blueprint="Mandrill Guard" />
+    <object Chance="1" Number="1" Blueprint="Simian Monarch" />
+    <object Chance="5" Number="1-2" Blueprint="Bandit Lord" />
+    <object Chance="5" Number="1-2" Blueprint="Technobarbarian" />
+    <object Chance="10" Number="1-10" Blueprint="Woolly Mammoth" />
+    <object Chance="5" Number="1-5" Blueprint="Cave Lion" />
+    <object Chance="5" Number="1-5" Blueprint="Warg" />
+    <object Chance="5" Number="3-6" Blueprint="Ironhoof Oryx" />
+    <object Chance="5" Number="1" Blueprint="Great Roc" />
+    <object Chance="5" Number="1-2" Blueprint="Hell Pig" />
+    <object Chance="4" Number="1-2" Blueprint="Short_Face Bear" />
+    <object Chance="4" Number="1-2" Blueprint="Twin_Headed Tarantula" />
+    <object Chance="1" Number="1" Blueprint="Apeling Scion" />
+    <object Chance="5" Number="1" Blueprint="Enlightened Orangutan" />
+    <object Chance="20" Number="5-10" Blueprint="Orc" />
+    <object Chance="10" Number="1-2" Blueprint="Orc Brute" />
+    <object Chance="3" Number="1" Blueprint="Accursed Princeling" />
+    <object Chance="3" Number="1" Blueprint="Hordeling Knight" />
+    <object Chance="3" Number="1" Blueprint="Wretched Chimera" />
+    <object Chance="3" Number="1" Blueprint="Chrome Colossus" />
+    <object Chance="10" Number="2-5" Blueprint="Goblin Weevil" />
+    <object Chance="10" Number="2-6" Blueprint="Wasp" />
+    <object Chance="5" Number="1-2" Blueprint="Wasp_Nest" />
+    <object Chance="5" Number="1-3" Blueprint="Mossy Mound" />
+    <object Chance="10" Number="1-4" Blueprint="Mech Hound" />
+    <object Chance="5" Number="1-4" Blueprint="Orcish Bowmaster" />
+    <object Chance="3" Number="1" Blueprint="Filthmonger" />
+    <object Chance="1" Number="1" Blueprint="AccursedDjinn" />
+  </population>
+
+  <population Name="SteppeZoneGlobals-Vegetation">
+    <group Name="Vegatables" Style="pickone">
+      <group Name="Vegatables1" Weight="99">
+        <object Chance="95" Number="360-480" Blueprint="Grass Clump" />
+        <object Chance="95" Number="120-200" Blueprint="Blade Grass" />
+        <object Chance="95" Number="20-80" Blueprint="Lichen Clump" />
+        <object Chance="95" Number="5-50" Blueprint="Thistle Flower" />
+	<object Chance="40" Number="25-80" Blueprint="Cedar" />
+        <object Chance="15" Number="1-5" Blueprint="Starapple Tree" />
+      </group>
+      <group Name="Vegatables2" Weight="1">
+        <object Chance="100" Blueprint="Urberry Bush" Number="50-75" Hint="Adjacent:80" />
+        <object Chance="95" Number="90-120" Blueprint="Blade Grass" />
+        <object Chance="95" Number="60-80" Blueprint="Grass Clump" />
+        <object Chance="95" Number="5-20" Blueprint="Thistle Flower" />
+				<object Chance="40" Number="10-20" Blueprint="Cedar" />
+        <object Chance="95" Number="5-40" Blueprint="Lichen Clump" />
+        <object Chance="15" Number="1-5" Blueprint="Starapple Tree" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="SteppeZoneGlobals-Underground-Vegetation">
+    <group Name="UndergroundVegatables" Style="pickone">
+      <group Name="UndergroundVegatables1" Weight="99">
+        <object Chance="95" Number="180-240" Blueprint="Grass Clump" />
+        <object Chance="95" Number="60-100" Blueprint="Blade Grass" />
+        <object Chance="95" Number="5-35" Blueprint="Cedar" />
+	<object Chance="30" Number="15-30" Blueprint="Lichen Clump" />
+        <object Chance="95" Number="5-25" Blueprint="Thistle Flower" />
+        <object Chance="15" Number="1-5" Blueprint="Starapple Tree" />
+      </group>
+      <group Name="UndergroundVegatables2" Weight="1">
+        <object Chance="100" Blueprint="Urberry Bush" Number="50-75" Hint="Adjacent:80" />
+        <object Chance="95" Number="45-60" Blueprint="Grass Clump" />
+        <object Chance="95" Number="15-25" Blueprint="Lichen Clump" />
+        <object Chance="95" Number="30-40" Blueprint="Blade Grass" />				
+				<object Chance="30" Number="5-15" Blueprint="Cedar" />
+        <object Chance="95" Number="3-15" Blueprint="Thistle Flower" />
+        <object Chance="15" Number="2-4" Blueprint="Starapple Tree" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="SteppePerSector">
+    <group Name="SpecialEncounters" Style="pickone">
+    </group>
+    <group Name="Creatures" Style="pickone">
+      <table Weight="9000" Name="Nothing" />
+      <object Weight="300" Number="3-5" Blueprint="Goblin Weevil" />
+      <object Weight="300" Number="1-4" Blueprint="Mossy Mound" />
+      <object Weight="100" Number="1" Blueprint="Wasp_Nest" />
+      <group Weight="300" Name="Orcs" Style="pickeach">
+        <object Number="1" Blueprint="Orc Brute" />
+        <object Number="3-6" Blueprint="Orc" />
+        <object Number="1-3" Blueprint="Orcish Bowmaster" />
+      </group>
+      <group Weight="25" Name="Simians" Style="pickeach">
+        <object Number="1-3" Blueprint="Simian Denizen" />
+        <object Number="1" Blueprint="Mandrill Guard" />
+      </group>
+      <object Weight="15" Number="1" Blueprint="Simian Monarch" />
+    </group>
+  </population>
+
+  <population Name="Lion cave">
+    <group Name="Types" Style="pickone">
+      <group Name="Small" Style="pickeach" Weight="95">
+        <object Chance="100" Blueprint="Bones" Number="12-20" Hint="Adjacent:90" />
+        <object Chance="75" Blueprint="Bones" Number="12-20" Hint="Adjacent:90" />
+        <object Chance="75" Blueprint="Grass Wall" Number="12-20" Hint="Adjacent:90" />
+        <object Chance="25" Blueprint="Grass Wall" Number="12-20" Hint="Adjacent:90" />
+        <object Blueprint="Cave Lion" Number="1-3" Hint="StackWithStartsWith:Bones" />
+      </group>
+      <group Name="Large" Style="pickeach" Weight="5">
+        <object Chance="100" Blueprint="Bones" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="100" Blueprint="Bones" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="100" Blueprint="Bones" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="100" Blueprint="Bones" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="75" Blueprint="Grass Wall" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="50" Blueprint="Grass Wall" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="50" Blueprint="Grass Wall" Number="24-40" Hint="Adjacent:90" />
+        <object Blueprint="Cave Lion" Number="2-5" Hint="StackWithStartsWith:Bones" />
+      </group>
+    </group>
+  </population>
+  <population Name="Mammoth Graveyeard">
+    <group Name="Types" Style="pickone">
+      <group Name="Small" Style="pickeach" Weight="95">
+        <object Chance="100" Blueprint="CatacombWall" Number="12-20" Hint="Adjacent:90" />
+        <object Chance="75" Blueprint="Bones" Number="12-20" Hint="Adjacent:90" />
+        <object Chance="75" Blueprint="CatacombWall" Number="12-20" Hint="Adjacent:90" />
+        <object Chance="25" Blueprint="Bones" Number="12-20" Hint="Adjacent:90" />
+        <object Blueprint="Woolly Mammoth" Chance="50" Number="1-3" Hint="StackWithStartsWith:Bones" />
+      </group>
+      <group Name="Large" Style="pickeach" Weight="5">
+        <object Chance="100" Blueprint="Bones" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="100" Blueprint="CatacombWall" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="100" Blueprint="Bones" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="100" Blueprint="CatacombWall" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="75" Blueprint="Bones" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="50" Blueprint="CatacombWall" Number="24-40" Hint="Adjacent:90" />
+        <object Chance="50" Blueprint="Bones" Number="24-40" Hint="Adjacent:90" />
+        <object Blueprint="Woolly Mammoth" Chance="100" Number="2-5" Hint="StackWithStartsWith:Bones" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="LairOwners_Steppe">
+    <group Name="Options" Style="pickone">
+      <object Blueprint="Orc" />
+      <object Blueprint="Enlightened Orangutan" />
+      <object Blueprint="Apeling Scion" />
+      <object Blueprint="Accursed Princeling" />
+      <object Blueprint="Woolly Mammoth" />
+      <object Blueprint="Wretched Chimera" />
+      <object Blueprint="Great Roc" />
+      <object Blueprint="Short_Face Bear" />
+      <object Blueprint="Hell Pig" />
+      <object Blueprint="Cave Lion" />
+      <object Blueprint="Warg" />
+      <object Blueprint="Bandit Lord" />
+      <object Blueprint="Warg" />
+      <object Blueprint="Technobarbarian" />
+    </group>
+  </population>
+
+  <population Name="SteppeCavePopulation">
+    <!--Random stuff-->
+    <group Name="Encounters" Style="pickone">
+      <table Name="Nothing" Weight="95" />
+      <table Name="CaveOddEncounters" Weight="5" />
+    </group>
+
+    <group Name="Contents" Style="pickone">
+      <table Name="Nothing" Weight="75" />
+
+      <!-- Creatures -->
+      <group Name="Creatures" Style="pickone" Weight="25">
+        <table Name="Tier2CaveCreatures" />        
+      </group>
+
+      <!-- Merge tables -->
+      <group Name="Populations" Style="pickone" Weight="6">
+        <table Name="Tier3CavePopulation" />
+      </group>
+
+      <!--Lairs-->
+      <group Name="Lairs" Style="pickone" Weight="5">
+        <table Weight="20" Name="SpiderLairs1"  />
+        <table Weight="20" Name="OozeLairs1" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="Mammoth corpse">
+    <group Name="Items" Style="pickone" Weight="1">
+      <object Blueprint="Mammoth Ivory" Number="1" Weight="70" />
+      <object Blueprint="Mammoth Cloak" Number="1" Weight="30" />
+        </group>
+  </population>
+
+	<population Name="NaphtaaliMegaMinyan">
+		<group Name="Party" Style="pickeach">	
+			<object Blueprint="Naphtaali Hunter" Number="4-8" />
+			<object Blueprint="Naphtaali Brave" Number="2-4" />
+			<object Blueprint="Naphtaali Seeker" Number="2-4" />
+			<object Blueprint="Naphtaali Technician" Number="2-4" />
+			<object Blueprint="Naphtaali Trapper" Number="1-4" />
+		</group>							
+	</population>
+
+
+  <!-- Variety Creatures -->
+  <population Name="FilthmongerInventory">
+    <group Name="Items" Style="pickeach">
+      <table Name="DynamicObjectsTable:Filth:Tier1" Number="5-6" />
+      <table Name="DynamicObjectsTable:Filth:Tier2" Number="3-4" />
+      <table Name="DynamicObjectsTable:Filth:Tier3" Number="1-3" />
+      <table Name="DynamicObjectsTable:Filth:Tier{zonetier}" Number="2-4" />
+      <table Name="DynamicObjectsTable:Filth:Tier{zonetier+1}" Number="1-3" />
+      <table Name="DynamicObjectsTable:Corpses" Number="1=4"/>
+      <table Name="Junk {zonetier}" Number="2-4"/>
+      <table Name="Junk:Tier{zonetier+1}" Number="1-2"/>
+    <object Blueprint="Lead Slug" Number="50-80" />
+    </group>
+  </population>
+
+   <population Name="BaboonParty" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Chance="10" Number="1" Blueprint="Baboon Rogue" />
+    </group>
+  </population>
+  <population Name="BigBaboonParty" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Chance="10" Number="1" Blueprint="Baboon Rogue" />
+    </group>
+  </population>
+
+  <population Name="MountainsZoneGlobals-Reachable" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+			<object Chance="10" Number="1d3" Blueprint="Goliath" />
+    </group>
+  </population>
+
+  <population Name="HillsZoneGlobals-Reachable" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+        <object Chance="5" Number="1d2" Blueprint="Pit Viper" />
+      <object Chance="2" Number="1d2" Blueprint="Goliath"/>
+    </group>
+  </population>
+
+  <population Name="SaltDesertZoneGlobals" Load="Merge">
+    <object Chance="1" Blueprint="Great Mechacolossus" />
+		<object Chance="8" Number="1-4" Blueprint="Vulture" />
+  </population>
+
+  <population Name="SaltDuneCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <group Name="Colossus" Style="pickeach" Weight="1">
+        <object Number="1" Blueprint="Great Mechacolossus" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="DesertCanyonCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="10" Number="1" Blueprint="Owl" />
+      <object Weight="10" Number="1-2" Blueprint="Vulture" />
+      <object Weight="10" Number="1" Blueprint="Hedgehog" />
+      <object Weight="10" Number="2-3" Blueprint="Rabbit" />
+    </group>
+  </population>
+
+  <population Name="DesertCanyonZoneGlobals-Reachable" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Chance="10" Number="1d4" Blueprint="Vulture" />
+      <object Chance="10" Number="1d2" Blueprint="Owl" />
+      <object Chance="10" Number="1d1" Blueprint="Hedgehog" />
+      <object Chance="10" Number="2d4" Blueprint="Rabbit" />
+    </group>
+  </population>
+
+  <population Name="RiversZoneGlobals" Load="Merge">
+    <object Chance="35" Number="1d6" Blueprint="Dragonfly Knight" />
+    <object Chance="35" Number="1d6" Blueprint="Mosquito Harrier" />
+    <object Chance="15" Number="1d6" Blueprint="Homarid" />
+    <object Chance="15" Number="1d3" Blueprint="Frog Slime" />
+    <object Chance="10" Number="1" Blueprint="Hermit Knight" />
+  </population>
+
+  <population Name="WaterCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="3" Number="1d3" Blueprint="Dragonfly Knight" />
+      <object Weight="3" Number="1d3" Blueprint="Mosquito Harrier" />
+      <object Weight="3" Number="1d3" Blueprint="Homarid" />
+      <object Weight="3" Number="1" Blueprint="Frog Slime" />
+      <object Weight="1" Number="1" Blueprint="Hermit Knight" />
+    </group>
+  </population>
+
+  <population Name="SaltMarshZoneGlobals" Load="Merge">
+    <table Name="StandardSurfaceGlobals" Load="Merge"/>
+    <object Chance="50" Blueprint ="Rabbit" />
+  </population>
+
+  <population Name="FlowerFieldsPopulation" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Chance="10" Number="1" Blueprint="Queen Bee" />
+        <object Chance="10" Number="1d6" Blueprint="Bee at Arms" />
+        <object Chance="10" Number="1d3" Blueprint="Pit Viper" />
+      <object Chance="10" Number="2-3" Blueprint="Rabbit" />
+      </group>
+  </population>
+
+  <population Name="FlowerfieldCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="10" Number="1" Blueprint="Queen Bee" />
+      <object Weight="5" Number="1d3" Blueprint="Pit Viper" />
+    </group>
+  </population>
+
+  <population Name="JungleZoneGlobals" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="2" Number="1" Blueprint="Beetle Baron" />
+      <object Weight="3" Number="1" Blueprint="Weevil Warmonger" />
+      <object Weight="2" Number="1" Blueprint="Maggot Troubador" />
+      <object Weight="2" Number="1" Blueprint="Shieldbug Duke" />
+      <object Weight="4" Number="1d3" Blueprint="Myriapod Myrmidon" />
+      <object Weight="4" Number="1d3" Blueprint="Pit Viper" />
+    </group>
+  </population>
+
+  <population Name="JungleCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="2" Number="1" Blueprint="Beetle Baron" />
+      <object Weight="3" Number="1" Blueprint="Weevil Warmonger" />
+      <object Weight="2" Number="1" Blueprint="Maggot Troubador" />
+      <object Weight="2" Number="1" Blueprint="Shieldbug Duke" />
+      <object Weight="4" Number="1d3" Blueprint="Myriapod Myrmidon" />
+      <object Weight="4" Number="1d3" Blueprint="Pit Viper" />
+    </group>
+  </population>
+
+  <population Name="Tier2CaveCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+			<object Weight="10" Number="2-4" Blueprint="Ratling" />
+			<object Weight="5" Number="1-4" Blueprint="Pit Viper" />
+			<object Weight="3" Number="1" Blueprint="Drake" />
+    </group>
+  </population>
+  <population Name="Tier5CaveCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+			<object Weight="5" Number="1d6" Blueprint="Cave Troll" />
+    </group>
+  </population>
+
+  <population Name="Tier1RuinsCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="5" Number="1" Blueprint="Owl" />
+      <object Weight="5" Number="1-2" Blueprint="Ratling" />
+      <object Weight="5" Number="2d3" Blueprint="Hedgehog" />
+      <object Weight="2" Number="1" Blueprint="Murder Rabbit" />
+      <object Weight="5" Number="1" Blueprint="Rabbit" />
+      <object Weight="2" Number="1" Blueprint="Drake" />
+      <object Weight="5" Number="1-2" Blueprint="Rat" />
+      <object Weight="3" Number="1" Blueprint="Vulture" />
+      <object Weight="3" Number="1" Blueprint="Pit Viper" />
+    </group>
+  </population>
+
+  <population Name="Tier2RuinsCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="3" Number="1" Blueprint="Owl" />
+      <object Weight="5" Number="1-4" Blueprint="Ratling" />
+      <object Weight="5" Number="2d3" Blueprint="Hedgehog" />
+      <object Weight="2" Number="1" Blueprint="Murder Rabbit" />
+      <object Weight="3" Number="1" Blueprint="Rabbit" />
+      <object Weight="3" Number="1" Blueprint="Drake" />
+      <object Weight="5" Number="2d3" Blueprint="Rat" />
+      <object Weight="3" Number="1-3" Blueprint="Vulture" />
+      <object Weight="3" Number="1-3" Blueprint="Pit Viper" />
+    </group>
+  </population>
+
+  <population Name="Tier3RuinsCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="5" Number="1" Blueprint="Dragonfly Knight" />
+      <object Weight="6" Number="1" Blueprint="Drake" />
+      <object Weight="5" Number="1" Blueprint="Bee at Arms" />
+      <object Weight="5" Number="1-3" Blueprint="Beetle Baron" />
+      <object Weight="1" Number="1" Blueprint="Fire Ant Queen" />
+      <object Weight="5" Number="1-3" Blueprint="Myriapod Myrmidon" />
+      <object Weight="5" Number="1" Blueprint="Queen Bee" />
+      <object Weight="5" Number="1" Blueprint="Mosquito Harrier" />
+      <object Weight="5" Number="1" Blueprint="Shieldbug Duke" />      
+      <object Weight="5" Number="1" Blueprint="Weevil Warmonger" />
+      <object Weight="5" Number="1" Blueprint="Maggot Troubador" />
+    </group>
+  </population>
+
+  <population Name="Tier4RuinsCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">      
+      <object Weight="5" Number="1" Blueprint="Goliath" />
+      <object Weight="10" Number="1-3" Blueprint="Homarid" />
+    </group>
+  </population>
+
+  <population Name="Tier5RuinsCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="5" Number="2-4" Blueprint="Cave Troll" />
+      <object Weight="10" Number="1" Blueprint="Vinegaroon" />
+    </group>
+  </population>
+
+  <population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
+    <object Chance="8" Number="1-3" Blueprint="Wild Monkey" />
+    <object Chance="5" Number="1" Blueprint="Orcish Bowmaster" />
+  </population>
+
+  <population Name="BananaGroveZoneGlobals" Load="Merge">
+    <table Name="StandardSurfaceGlobals" Load="Merge"/>
+    <object Chance="50" Number="1-3" Blueprint="Vinegaroon" />
+  </population>
+  <population Name="BananaGroveCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="10" Number="1" Blueprint="Vinegaroon" />
+    </group>
+  </population>
+
+  <population Name="BaroqueRuinsZoneGlobals-Creatures" Load="Merge">
+    <object Chance="3" Number="1-3" Blueprint="Befouled Rifler" />
+    <object Chance="5" Number="1-3" Blueprint="Orcish Bowmaster" />
+    <object Chance="1" Number="1" Blueprint="Megabug" />
+  </population>
+
+	<population Name="MoonStairZoneGlobals-Creatures" Load="Merge">
+		<object Chance="2" Number="1" Blueprint="Megabug" />
+	</population>
+
+  <population Name="LakeHinnomPerSector" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Weight="2" Number="1" Blueprint="Mighty Catfish" />
+        <object Weight="3" Number="1-2" Blueprint="Mine Drone" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="PalladiumReefPerSector" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Weight="4" Number="1-4" Blueprint="Mine Drone" />
+           <object Weight="4" Number="1" Blueprint="Mantis Shrimp Club" />
+           <object Weight="4" Number="1" Blueprint="Mantis Shrimp Dagger" />
+      </group>
+    </group>
+  </population>
+
+
+  <population Name="Tombs_Surface">
+    <group Name="Contents" Style="pickeach">
+      <object Chance="25" Number="1d3" Blueprint="Snapjaw Scavenger 2" />
+      <object Chance="75" Number="1d2" Blueprint="Snapjaw Scavenger 2" />
+      <object Chance="25" Number="1" Blueprint="Snapjaw Scavenger 2" />
+      <object Chance="50" Number="2d3" Blueprint="Snapjaw Hunter 2" />
+      <object Chance="2" Number="1" Blueprint="Snapjaw Shotgunner 1" />
+      <object Chance="50" Number="1" Blueprint="Snapjaw Brute 2" />
+      <object Chance="25" Number="1" Blueprint="Snapjaw Warrior 2" />
+      <object Chance="10" Number="1" Blueprint="Snapjaw Warlord 2" />
+      <object Chance="10" Number="1" Blueprint="Snapjaw Warlord 1" />
+      <object Chance="100" Number="1" Blueprint="Snapjaw Hero 1" />
+      <object Chance="100" Number="1d4" Blueprint="Croc" />
+    </group>
+  </population>
+
+
+  <!-- Swarming Citadels -->
+  <population Name="Citadels_Surface">
+    <table Name="StandardSurfaceGlobals" />
+    <object Chance="100" Blueprint="Dirty" />
+    <object Chance="25" Blueprint="Chitin Chest" />
+    <object Chance="20" Number="2" Blueprint="Dragonfly Knight" />
+    <object Chance="20" Number="2-4" Blueprint="Bee at Arms" />
+    <object Chance="5" Number="4" Blueprint="GiantDragonfly" />
+    <object Chance="20" Number="1" Blueprint="Beetle Baron" />
+    <object Chance="10" Number="1" Blueprint="Queen Bee" />
+    <object Chance="15" Number="2" Blueprint="Mosquito Harrier" />
+  </population>
+
+  <population Name="CitadelsZoneGlobals-Reachable">
+    <table Chance="10" Name="FlowerPatches" />
+
+    <table Chance="95" Number="2-3" Name="CitadelsZoneGlobals-Creatures" />
+
+    <group Chance="1" Name="DromadTrader" Style="pickone">
+      <object Weight="10" Blueprint="DromadTrader6" />
+      <object Weight="70" Blueprint="DromadTrader7" />
+      <object Weight="10" Blueprint="DromadTrader8" />
+      <object Weight="10" Blueprint="Filthmonger" />
+    </group>    
+  </population>
+
+  <population Name="CitadelsZoneGlobals-Creatures">
+    <object Chance="20" Number="2" Blueprint="Dragonfly Knight" />
+    <object Chance="20" Number="1-3" Blueprint="Bee at Arms" />
+    <object Chance="5" Number="4" Blueprint="GiantDragonfly" />
+    <object Chance="20" Number="1" Blueprint="Beetle Baron" />
+    <object Chance="10" Number="1" Blueprint="Queen Bee" />
+    <object Chance="15" Number="2" Blueprint="Mosquito Harrier" />
+    <object Chance="20" Number="1-4" Blueprint="Giant Centipede" />
+    <object Chance="10" Number="1-2" Blueprint="Weevil Warmonger" />
+    <object Chance="15" Number="1" Blueprint="Maggot Troubador" />
+    <object Chance="10" Number="1" Blueprint="Shieldbug Duke" />
+    <object Chance="20" Number="1-4" Blueprint="Giant Beetle " />
+    <object Chance="15" Number="1-2" Blueprint="Worker ant " />
+    <object Chance="15" Number="1-2" Blueprint="Fire ant" />
+    <object Chance="10" Number="1" Blueprint="Fire Ant Queen" />
+    <object Chance="15" Number="1-3" Blueprint="Myriapod Myrmidon" />
+  </population>
+
+
+  <population Name="Citadels 1">
+    <object Chance="100" Blueprint="Rocky" />
+    <table Chance="2" Name="Pilgrims" />
+    <object Chance="4" Blueprint="SultanShrine" />
+    <object Chance="100" Blueprint="StairsDownBuilder" />
+    <object Chance="25" Blueprint="Chitin Chest" />
+
+    <group Chance="25" Style="pickeach" Name="Trash">
+      <object Blueprint="Garbage" Number="5-10" />
+      <table Chance="100,50,25" Name="Junk 2" />
+      <table Chance="50,25,10" Name="Junk 3" />
+    </group>
+
+    <object Chance="100" Number="2-4" Blueprint="Giant Centipede" />
+    <object Chance="50" Number="1-2" Blueprint="Weevil Warmonger" />
+    <object Chance="25" Number="1" Blueprint="Maggot Troubador" />
+    <object Chance="15" Number="1" Blueprint="Shieldbug Duke" />
+    <object Chance="50" Number="1-2" Blueprint="Giant Beetle " />
+
+    <object Chance="100" Number="1" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="Shale Cave Features" />
+      <table Weight="10" Name="Slimy Features" />
+      <table Weight="30" Name="InsectParty0" />
+      <table Weight="100" Name="CitadelsZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 2" />
+    </group>
+  </population>
+
+  <population Name="Citadels 2">
+    <object Chance="100" Blueprint="Rocky" />
+    <table Chance="2" Name="Pilgrims" />
+    <object Chance="4" Blueprint="SultanShrine" />
+    <object Chance="100" Blueprint="StairsDownBuilder" />
+    <object Chance="25" Blueprint="Chitin Chest" />
+
+    <group Chance="25" Style="pickeach" Name="Trash">
+      <object Blueprint="Garbage" Number="5-10" />
+      <table Chance="100,50,25" Name="Junk 2" />
+      <table Chance="50,25,10" Name="Junk 3" />
+    </group>
+
+    <object Chance="100" Number="2-4" Blueprint="Giant Centipede" />
+    <object Chance="25" Number="1-2" Blueprint="Weevil Warmonger" />
+    <object Chance="20" Number="1" Blueprint="Maggot Troubador" />
+    <object Chance="15" Number="1" Blueprint="Shieldbug Duke" />
+    <object Chance="50" Number="1-2" Blueprint="Giant Beetle " />
+    <object Chance="15" Number="1" Blueprint="Giant Beetle Nest" />
+    <object Chance="25" Number="1-2" Blueprint="Fire ant" />
+    <object Chance="5" Number="1" Blueprint="Fire Ant Queen" />
+    <object Chance="15" Number="1-4" Blueprint="Myriapod Myrmidon" />
+    <object Chance="8" Number="1-4" Blueprint="Dragonfly Knight" />
+    <object Chance="25" Number="1-2" Blueprint="Worker ant " />
+    <object Chance="8" Number="1-4" Blueprint="Bee at Arms" />
+
+    <object Chance="100" Number="1" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="Shale Cave Features" />
+      <table Weight="10" Name="Slimy Features" />
+      <table Weight="30" Name="InsectParty0" />
+      <table Weight="30" Name="Citadels 1" />
+      <table Weight="100" Name="CitadelsZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 2" />
+    </group>
+
+  </population>
+
+  <population Name="Citadels 3">
+    <object Chance="100" Blueprint="Rocky" />
+    <table Chance="2" Name="Pilgrims" />
+    <object Chance="4" Blueprint="SultanShrine" />
+    <object Chance="25" Blueprint="Chitin Chest" />
+
+    <group Chance="25" Style="pickeach" Name="Trash">
+      <object Blueprint="Garbage" Number="5-10" />
+      <table Chance="100,50,25" Name="Junk 2" />
+      <table Chance="50,25,10" Name="Junk 3" />
+    </group>
+
+    <object Chance="100" Number="2-4" Blueprint="Giant Centipede" />
+    <object Chance="50" Number="1-2" Blueprint="Weevil Warmonger" />
+    <object Chance="25" Number="1" Blueprint="Maggot Troubador" />
+    <object Chance="15" Number="1" Blueprint="Shieldbug Duke" />
+    <object Chance="50" Number="1-2" Blueprint="Giant Beetle " />
+    <object Chance="15" Number="1" Blueprint="Giant Beetle Nest" />
+    <object Chance="25" Number="1-3" Blueprint="Fire ant" />
+    <object Chance="25" Number="1" Blueprint="Fire Ant Queen" />
+    <object Chance="15" Number="1-4" Blueprint="Myriapod Myrmidon" />
+    <object Chance="8" Number="1-4" Blueprint="Dragonfly Knight" />
+    <object Chance="25" Number="1-4" Blueprint="Worker ant " />
+    <object Chance="8" Number="1-4" Blueprint="Bee at Arms" />
+
+    <object Chance="100" Number="1" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+    <object Chance="25" Number="1-4" Blueprint="Chitin Wall" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="Shale Cave Features" />
+      <table Weight="10" Name="Slimy Features" />
+      <table Weight="30" Name="InsectParty0" />
+      <table Weight="30" Name="Citadels 2" />
+      <table Weight="100" Name="CitadelsZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 2" />
+    </group>
+  </population>
+
+  <population Name="CitadelsPerSector">
+    <object Chance="30" Number="1-4" Blueprint="Giant Centipede" />
+    <object Chance="15" Number="2-4" Blueprint="GiantDragonfly" />
+    <object Chance="40" Number="1-3" Blueprint="Bee at Arms" />
+    <object Chance="30" Number="1-3" Blueprint="Giant Beetle " />
+    <object Chance="30" Number="1-2" Blueprint="Worker ant " />
+    <object Chance="35" Number="1-4" Blueprint="Myriapod Myrmidon" />
+  </population>
+
+  <population Name="CitadelsBottomPool">
+    <object Chance="100" Number="5" Blueprint="Chitin Wall" />
+    <object Chance="100" Number="5-10" Blueprint="Chitin Wall" />
+    <group Style="pickone" Name="Loot">
+      <object Blueprint="Rare Chest3" />
+      <object Blueprint="Chitin Chest" />
+    </group>
+    <group Style="pickone" Name="BigCreature">
+      <object Weight="10" Blueprint="Weevil Warmonger" />
+      <object Weight="10" Blueprint="Fire Ant Queen" />
+      <object Weight="5" Blueprint="Slumberling" />
+      <object Weight="5" Blueprint="Agolfly " />
+      <object Weight="5" Blueprint="Agolzvuv" />
+      <object Weight="10" Blueprint="Shieldbug Duke" />
+    </group>
+  </population>
+
+  <population Name="InsectParty0">
+    <group Name="Party" Style="pickeach">
+      <object Chance="100" Number="1-3" Blueprint="Giant Centipede" />
+      <object Chance="75" Number="1-3" Blueprint="GiantDragonfly" />
+      <object Chance="25" Number="1-3" Blueprint="Dragonfly Knight" />
+      <object Chance="2" Number="1" Blueprint="Beetle Baron" />
+      <object Chance="15" Number="1" Blueprint="Weevil Warmonger" />
+      <object Chance="10,3" Number="1" Blueprint="Myriapod Myrmidon" />
+      <object Chance="10" Number="1" Blueprint="Maggot Troubador" />
+      <object Chance="3" Number="1" Blueprint="Shieldbug Duke" />
+      <table Name="HumanoidEnvironmentFeatures" Chance="25" />
+      <table Name="InsectParty0" Chance="10" />
+    </group>
+  </population>
+  <population Name="InsectParty1">
+    <group Name="Party" Style="pickeach">
+    <object Blueprint="Bee at Arms" Number="1-5" />
+      <table Name="InsectParty1" Chance="10" />
+    </group>
+  </population>
+
+  <population Name="Chitin Loot">
+    <group Name="Items" Style="pickone">
+      <object Weight="10" Number="1" Blueprint="Chitin Carapace" />
+      <object Weight="10" Number="1" Blueprint="Chitin Helm" />
+      <object Weight="10" Number="1" Blueprint="Chitin Boots" />
+      <object Weight="10" Number="1" Blueprint="Chitin Gauntlets" />
+      <object Weight="25" Number="2-5" Blueprint="Pollen" />
+      <table Weight="5" Number="1" Name="Junk 3" />
+      <table Weight="5" Number="1" Name="Junk 2R" />
+    </group>
+  </population>
+
+  <population Name="Chitin Treasure">
+
+    <group Style="pickeach" Name="Junk">
+      <table Chance="40" Name="Junk 3" />
+      <table Chance="40" Name="Junk 2R" />
+      <table Chance="100" Name="Chitin Loot" />
+    </group>
+  </population>
+
+  <!-- Mechacolossus -->
+  <population Name="Mechacolossus_one">
+    <object Chance="25" Blueprint="Chest6" />
+
+    <group Chance="25" Style="pickeach" Name="Trash">
+      <object Blueprint="Garbage" Number="5-10" />
+      <table Chance="100,50,25" Name="Junk 4" />
+      <table Chance="50,25,10" Name="Junk 5" />
+    </group>
+
+    <object Chance="100" Number="2-4" Blueprint="Builder Drone" />
+    <object Chance="75" Number="2-4" Blueprint="corrupted builder drone" />
+    <object Chance="100" Number="1-3" Blueprint="Defender Drone" />
+    <object Chance="65" Number="2-4" Blueprint="corrupted defender drone" />
+    <object Chance="50" Number="1-2" Blueprint="Warrior Drone" />
+    <object Chance="50" Number="1" Blueprint="corrupted warrior drone" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="MechacolossusZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 4" />
+    </group>
+  </population>
+  <population Name="Mechacolossus_two">
+    <object Chance="100" Blueprint="Chest6" />
+
+    <group Chance="25" Style="pickeach" Name="Trash">
+      <object Blueprint="Garbage" Number="5-10" />
+      <table Chance="100,50,25" Name="Junk 4" />
+      <table Chance="50,25,10" Name="Junk 5" />
+    </group>
+
+    <object Chance="25" Number="1-4" Blueprint="Builder Drone" />
+    <object Chance="100" Number="2-4" Blueprint="corrupted builder drone" />
+    <object Chance="35" Number="1-3" Blueprint="Defender Drone" />
+    <object Chance="100" Number="2-4" Blueprint="corrupted defender drone" />
+    <object Chance="100" Number="1-2" Blueprint="Warrior Drone" />
+    <object Chance="100" Number="2-4" Blueprint="corrupted warrior drone" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="MechacolossusZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 5" />
+    </group>
+    <group Style="pickone" Name="BigCreature">
+      <object Weight="10" Blueprint="dread shadow Tervada" />
+      <object Weight="10" Blueprint="dread shadow Vrenaxa" />
+      <object Weight="10" Blueprint="dread shadow Balzagr" />
+      <object Weight="10" Blueprint="dread shadow Thrirox" />
+      <object Weight="10" Blueprint="dread shadow Chrarakanaj" />
+      <object Weight="10" Blueprint="dread shadow Jamoonkazur" />
+      <object Weight="10" Blueprint="dread shadow Uldagth" />
+    </group>
+
+  </population>
+  <population Name="MechacolossusPerSector">
+    <object Chance="25" Number="2-4" Blueprint="Builder Drone" />
+    <object Chance="15" Number="2-4" Blueprint="corrupted builder drone" />
+    <object Chance="25" Number="1-3" Blueprint="Defender Drone" />
+    <object Chance="15" Number="2-4" Blueprint="corrupted defender drone" />
+    <object Chance="10" Number="1-2" Blueprint="Warrior Drone" />
+    <object Chance="10" Number="1" Blueprint="corrupted warrior drone" />
+  </population>
+  <population Name="MechacolossusZoneGlobals-Creatures">
+    <object Chance="20" Number="2-4" Blueprint="Builder Drone" />
+    <object Chance="15" Number="2-4" Blueprint="corrupted builder drone" />
+    <object Chance="20" Number="1-3" Blueprint="Defender Drone" />
+    <object Chance="15" Number="2-4" Blueprint="corrupted defender drone" />
+    <object Chance="10" Number="1-2" Blueprint="Warrior Drone" />
+    <object Chance="10" Number="1" Blueprint="corrupted warrior drone" />
+  </population>
+
+  <population Name="Mechacolossus Loot">
+    <group Name="Items" Style="pickone">
+      <object Weight="5" Number="1" Blueprint="Fire mechsword" />
+      <object Weight="5" Number="1" Blueprint="Frost mechsword" />
+      <object Weight="5" Number="1" Blueprint="Wind mechaxe" />
+      <object Weight="5" Number="1" Blueprint="Earth mechboots" />
+      <object Weight="5" Number="1" Blueprint="Stone mechclaw" />
+      <object Weight="5" Number="1" Blueprint="Aquatic mechhook" />
+      <object Weight="10" Number="1" Blueprint="Dagger6" />
+      <object Weight="10" Number="1" Blueprint="Long Sword6" />
+      <object Weight="10" Number="1" Blueprint="Long Sword6th" />
+      <object Weight="10" Number="1" Blueprint="Battle Axe6" />
+      <object Weight="10" Number="1" Blueprint="Battle Axe6th" />
+      <object Weight="10" Number="1" Blueprint="Cudgel6" />
+      <object Weight="10" Number="1" Blueprint="Cudgel6th" />
+      <object Weight="10" Number="1" Blueprint="Crysteel Shield" />
+    </group>
+  </population>
+
+
+  <!-- Ancient City -->
+  <population Name="Ancient Armor">
+    <group Name="Items" Style="pickone">
+      <object Weight="10" Number="1" Blueprint="Shadowed Hauberk" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Gauntlets" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Warboots" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Helm" />
+    </group>
+  </population>
+  <population Name="Ancient Weapons">
+    <group Name="Items" Style="pickone">
+      <object Weight="10" Number="1" Blueprint="Shadowed Mace" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Morningstar" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Stilleto" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Axe" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Greataxe" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Long Sword" />
+      <object Weight="10" Number="1" Blueprint="Shadowed Greatsword" />
+    </group>
+  </population>
+
+  <population Name="Ancient Treasure">
+
+    <group Style="pickeach" Name="Junk">
+      <table Chance="50" Name="Ancient Armor" />
+      <table Chance="10" Name="Junk 8" />
+      <table Chance="100" Name="Ancient Weapons" />
+    </group>
+  </population>
+  <population Name="Ancient Loot">
+
+    <group Style="pickeach" Name="Junk">
+      <table Chance="100" Name="Ancient Armor" />
+      <table Chance="5" Name="Junk 8" />
+      <table Chance="100" Name="Ancient Weapons" />
+    </group>
+  </population>
+
+  <population Name="AncientCity_one">
+    <group Chance="100" Style="pickeach" Name="Trash">
+      <object Blueprint="LavaPuddle" Number="5" Hint="Adjacent"/>
+      <object Blueprint="DreadOpenShaft" Number="1-3" />
+      <table Chance="100,50,25" Name="Junk 6" />
+      <table Chance="50,25,10" Name="Junk 7" />
+    </group>
+    <object Chance="25" Blueprint="Chest8" />
+
+    <object Chance="15" Number="1-4" Blueprint="Roach Knight" />
+    <object Chance="10" Number="1-3" Blueprint="Vulture Fly" />
+    <object Chance="5" Number="1-2" Blueprint="Unirhox Beetle" />
+    <object Chance="5" Number="1-2" Blueprint="Vipermandible Centipede" />
+    <object Chance="10" Number="1-3" Blueprint="spore tower" />
+    <object Chance="5" Number="1-2" Blueprint="mycelial crawler" />
+    <object Chance="10" Number="1-3" Blueprint="Spore Shambler" />
+    <object Chance="15" Number="1-3" Blueprint="Shroomling Warrior" />
+    <object Chance="15" Number="1-3" Blueprint="Brood Spider" />
+    <object Chance="10" Number="1-3" Blueprint="Wolf Spider" />
+    <object Chance="5" Number="1-2" Blueprint="Orb Weaver Spider" />
+    <object Chance="5" Number="1-2" Blueprint="Spiderling Horror" />
+    <object Chance="10" Number="1-2" Blueprint="Burrowing Death Worm" />
+    <object Chance="5" Number="1-2" Blueprint="Grand Worm" />
+    <object Chance="10" Number="1-3" Blueprint="Wormkin Warrior" />
+    <object Chance="15" Number="1-3" Blueprint="Worm Cultist" />
+    <object Chance="5" Number="1-2" Blueprint="Cannibal Shaman" />
+    <object Chance="5" Number="1-2" Blueprint="Cyclopean Cannibal" />
+    <object Chance="10" Number="1-3" Blueprint="Cannibal Warrior" />
+    <object Chance="10" Number="1-3" Blueprint="Shadow Cannibal" />
+    <object Chance="10" Number="1-2" Blueprint="Mech Hound" />
+		<object Chance="3" Number="1" Blueprint="Megabug" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="AncientCityZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 7" />
+    </group>
+
+  </population>
+  <population Name="AncientCity_two">
+    <group Chance="100" Style="pickeach" Name="Trash">
+      <object Blueprint="LavaPuddle" Number="25" Hint="Adjacent"/>
+      <table Chance="100,50,25" Name="Junk 7" />
+      <table Chance="50,25,10" Name="Junk 8" />
+    </group>
+    <object Chance="15" Number="1-4" Blueprint="Roach Knight" />
+    <object Chance="10" Number="1-3" Blueprint="Vulture Fly" />
+    <object Chance="15" Number="1-2" Blueprint="Unirhox Beetle" />
+    <object Chance="15" Number="1-2" Blueprint="Vipermandible Centipede" />
+    <object Chance="10" Number="1-3" Blueprint="spore tower" />
+    <object Chance="15" Number="1-2" Blueprint="mycelial crawler" />
+    <object Chance="10" Number="1-3" Blueprint="Spore Shambler" />
+    <object Chance="15" Number="1-3" Blueprint="Shroomling Warrior" />
+    <object Chance="15" Number="1-3" Blueprint="Brood Spider" />
+    <object Chance="10" Number="1-3" Blueprint="Wolf Spider" />
+    <object Chance="15" Number="1-2" Blueprint="Orb Weaver Spider" />
+    <object Chance="15" Number="1-2" Blueprint="Spiderling Horror" />
+    <object Chance="20" Number="1-2" Blueprint="Burrowing Death Worm" />
+    <object Chance="15" Number="1-2" Blueprint="Grand Worm" />
+    <object Chance="10" Number="1-3" Blueprint="Wormkin Warrior" />
+    <object Chance="15" Number="1-3" Blueprint="Worm Cultist" />
+    <object Chance="15" Number="1-2" Blueprint="Cannibal Shaman" />
+    <object Chance="15" Number="1-2" Blueprint="Cyclopean Cannibal" />
+    <object Chance="10" Number="1-3" Blueprint="Cannibal Warrior" />
+    <object Chance="10" Number="1-3" Blueprint="Shadow Cannibal" />
+		<object Chance="2" Number="1" Blueprint="Megabug" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="AncientCityZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 8" />
+    </group>
+
+    <object Chance="100" Blueprint="Chest8" />
+    <group Style="pickone" Name="BigCreature">
+      <object Weight="10" Blueprint="hive god Thrirulxa" />
+      <object Weight="10" Blueprint="hive god Urqoss" />
+      <object Weight="10" Blueprint="hive god Eqlimaz" />
+      <object Weight="10" Blueprint="mabaloth Karkagazok" />
+      <object Weight="10" Blueprint="mabaloth Chrouwuko" />
+      <object Weight="10" Blueprint="mabaloth Avkulkiran" />
+      <object Weight="10" Blueprint="worm god Shlugnori" />
+      <object Weight="10" Blueprint="worm god Irphlunga" />
+      <object Weight="10" Blueprint="worm god Qrikmolg" />
+      <object Weight="10" Blueprint="spider god Jamazna" />
+      <object Weight="10" Blueprint="spider god Zirxaki" />
+      <object Weight="10" Blueprint="spider god Vriskuza" />
+      <object Weight="10" Blueprint="spore god Flaughougouf" />
+      <object Weight="10" Blueprint="spore god Gluighur" />
+      <object Weight="10" Blueprint="spore god Phougrolu" />
+    </group>
+  </population>
+  <population Name="AncientCityPerSector">
+    <object Chance="5" Number="2-4" Blueprint="Roach Knight" />
+    <object Chance="5" Number="1-4" Blueprint="Vulture Fly" />
+    <object Chance="3" Number="1-3" Blueprint="Unirhox Beetle" />
+    <object Chance="3" Number="1-3" Blueprint="Vipermandible Centipede" />
+    <object Chance="5" Number="2-4" Blueprint="spore tower" />
+    <object Chance="3" Number="1-3" Blueprint="mycelial crawler" />
+    <object Chance="5" Number="1-4" Blueprint="Spore Shambler" />
+    <object Chance="5" Number="2-4" Blueprint="Shroomling Warrior" />
+    <object Chance="5" Number="1-4" Blueprint="Brood Spider" />
+    <object Chance="5" Number="1-4" Blueprint="Wolf Spider" />
+    <object Chance="3" Number="1-3" Blueprint="Orb Weaver Spider" />
+    <object Chance="3" Number="1-2" Blueprint="Spiderling Horror" />
+    <object Chance="3" Number="1-2" Blueprint="Burrowing Death Worm" />
+    <object Chance="1" Number="1-3" Blueprint="Grand Worm" />
+    <object Chance="5" Number="2-4" Blueprint="Wormkin Warrior" />
+    <object Chance="5" Number="2-4" Blueprint="Worm Cultist" />
+    <object Chance="3" Number="1-3" Blueprint="Cannibal Shaman" />
+    <object Chance="3" Number="1-2" Blueprint="Cyclopean Cannibal" />
+    <object Chance="5" Number="2-4" Blueprint="Cannibal Warrior" />
+    <object Chance="5" Number="1-4" Blueprint="Shadow Cannibal" />
+    <object Chance="3" Number="1-2" Blueprint="Mech Hound" />
+		<object Chance="1" Number="1" Blueprint="Megabug" />
+  </population>
+  <population Name="AncientCityZoneGlobals-Creatures">
+    <object Chance="15" Number="2-4" Blueprint="Roach Knight" />
+    <object Chance="10" Number="1-4" Blueprint="Vulture Fly" />
+    <object Chance="5" Number="1-3" Blueprint="Unirhox Beetle" />
+    <object Chance="5" Number="1-3" Blueprint="Vipermandible Centipede" />
+    <object Chance="10" Number="2-4" Blueprint="spore tower" />
+    <object Chance="5" Number="1-3" Blueprint="mycelial crawler" />
+    <object Chance="10" Number="1-4" Blueprint="Spore Shambler" />
+    <object Chance="15" Number="2-4" Blueprint="Shroomling Warrior" />
+    <object Chance="15" Number="1-4" Blueprint="Brood Spider" />
+    <object Chance="10" Number="1-4" Blueprint="Wolf Spider" />
+    <object Chance="5" Number="1-3" Blueprint="Orb Weaver Spider" />
+    <object Chance="5" Number="1-2" Blueprint="Spiderling Horror" />
+    <object Chance="10" Number="1-2" Blueprint="Burrowing Death Worm" />
+    <object Chance="5" Number="1-3" Blueprint="Grand Worm" />
+    <object Chance="10" Number="2-4" Blueprint="Wormkin Warrior" />
+    <object Chance="15" Number="2-4" Blueprint="Worm Cultist" />
+    <object Chance="5" Number="1-3" Blueprint="Cannibal Shaman" />
+    <object Chance="5" Number="1-2" Blueprint="Cyclopean Cannibal" />
+    <object Chance="10" Number="2-4" Blueprint="Cannibal Warrior" />
+    <object Chance="10" Number="1-4" Blueprint="Shadow Cannibal" />
+    <object Chance="10" Number="1-2" Blueprint="Mech Hound" />
+  </population>
+
+  <!-- Sunken Ocean -->
+  <population Name="Deep Armor">
+    <group Name="Items" Style="pickone">
+      <object Weight="10" Number="1" Blueprint="Deep Carapace" />
+      <object Weight="10" Number="1" Blueprint="Deep Helmet" />
+      <object Weight="10" Number="1" Blueprint="Deep Gauntlets" />
+      <object Weight="10" Number="1" Blueprint="Deep Boots" />
+    </group>
+  </population>
+  <population Name="Deep Weapons">
+    <group Name="Items" Style="pickone">
+      <object Weight="10" Number="1" Blueprint="Deep Cudgel" />
+      <object Weight="10" Number="1" Blueprint="Deep Warhammer" />
+      <object Weight="10" Number="1" Blueprint="Deep Axe" />
+      <object Weight="10" Number="1" Blueprint="Deep Greataxe" />
+      <object Weight="10" Number="1" Blueprint="Deep Long Sword" />
+      <object Weight="10" Number="1" Blueprint="Deep Great Sword" />
+      <object Weight="10" Number="1" Blueprint="Limulicron Horn" />
+    </group>
+  </population>
+
+  <population Name="Deep Treasure">
+
+    <group Style="pickeach" Name="Junk">
+      <table Chance="50" Name="Deep Armor" />
+      <table Chance="10" Name="Junk 7" />
+      <table Chance="100" Name="Deep Weapons" />
+    </group>
+  </population>
+
+  <population Name="SunkenCaveDecoration">
+    <object Chance="3" Number="1d4" Blueprint="Dreadroot" />
+    <object Chance="3" Number="1d4" Blueprint="Young Ivory" />
+    <object Chance="3" Number="1d4" Blueprint="Dead Fan Coral" />
+    <object Chance="3" Number="1d4" Blueprint="Dead Deep Coral" />
+    <object Chance="3" Number="1d4" Blueprint="Dead Brain Coral" />
+    <object Chance="3" Number="1d2" Blueprint="SmallBoulder" />
+    <object Chance="3" Number="1d4+15" Blueprint="SaltyWaterPuddle" Hint="Adjacent" />
+    <object Chance="3" Number="1d2+15" Blueprint="BrackishWaterPuddle" Hint="Adjacent" />
+  </population>
+
+  <population Name="SunkenCavePopulation">
+    <!--Random stuff-->
+    <group Name="Encounters" Style="pickone">
+      <table Name="Nothing" Weight="95" />
+      <table Name="CaveOddEncounters" Weight="5" />
+    </group>
+
+    <group Name="Contents" Style="pickone">
+      <table Name="Nothing" Weight="140" />
+
+      <!-- Creatures -->
+      <group Name="Creatures" Style="pickone" Weight="25">
+        <table Name="Tier2CaveCreatures" Weight="10" />
+        <table Name="SaltDuneCreatures" Weight="10" />
+      </group>
+
+      <!-- Merge tables -->
+      <group Name="Populations" Style="pickone" Weight="6">
+        <table Name="Tier3CavePopulation" />
+      </group>
+
+    </group>
+  </population>
+
+  <population Name="SunkenOcean_one">
+    <object Chance="25" Blueprint="Chest8" />
+    <group Chance="100" Style="pickeach" Name="Trash">
+      <object Blueprint="SaltyWaterExtraDeepPool" Number="250" />
+      <object Blueprint="AbyssOpenShaft" Number="1-5" />
+      <object Blueprint="Brain Coral" Number="5-15" />
+      <object Blueprint="Deep Coral" Number="5-15" />
+      <object Blueprint="Fan Coral" Number="5-15" />
+      <object Blueprint="Barrel Sponge" Number="5-7" />
+      <table Chance="100,50,25" Name="Junk 5" />
+      <table Chance="50,25,10" Name="Junk 6" />
+    </group>
+
+    <object Chance="15" Number="1-3" Blueprint="Coconut Crab" />
+    <object Chance="15" Number="1-4" Blueprint="Limulicron Warrior" />
+    <object Chance="15" Number="2-4" Blueprint="Urchinspine Spearling" />
+    <object Chance="10" Number="1-6" Blueprint="Eyeless King Crab" />
+    <object Chance="5" Number="1-2" Blueprint="Grand Lobster" />
+    <object Chance="15" Number="1-3" Blueprint="Mindless Mystic" />
+    <object Chance="15" Number="1-4" Blueprint="Starfish crusher" />
+    <object Chance="15" Number="1-3" Blueprint="Cone Snail" />
+    <object Chance="15" Number="1-4" Blueprint="Shadow Scallop" />
+    <object Chance="5" Number="1-2" Blueprint="crown of thorns starfish" />
+    <object Chance="10" Number="2-6" Blueprint="Abyssal Snail" />
+    <object Chance="15" Number="1-3" Blueprint="Thresher Shark" />
+    <object Chance="15" Number="1-4" Blueprint="Angler Fish" />
+    <object Chance="15" Number="1-4" Blueprint="Gulper Eel" />
+    <object Chance="10" Number="1-2" Blueprint="Crawling Cannon" />
+    <object Chance="5" Number="1-2" Blueprint="Colossal Squid" />
+    <object Chance="10" Number="2-6" Blueprint="Hag Fish" />
+    <object Chance="10" Number="2-6" Blueprint="Mine Drone" />
+    <object Chance="10" Number="1-4" Blueprint="Pistol Shrimp" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="SunkenOceanZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 6" />
+    </group>
+
+  </population>
+  <population Name="SunkenOcean_two">
+    <object Chance="25" Blueprint="Chest8" />
+    <group Chance="100" Style="pickeach" Name="Trash">
+      <object Blueprint="SaltyWaterExtraDeepPool" Number="600" />
+      <object Blueprint="Brain Coral" Number="5-15" />
+      <object Blueprint="Deep Coral" Number="5-15" />
+      <object Blueprint="Fan Coral" Number="5-15" />
+      <object Blueprint="Barrel Sponge" Number="5-7" />
+      <table Chance="100,50,25" Name="Junk 7" />
+      <table Chance="50,25,10" Name="Junk 8" />
+    </group>
+
+    <object Chance="10" Number="1-3" Blueprint="Coconut Crab" />
+    <object Chance="10" Number="1-4" Blueprint="Limulicron Warrior" />
+    <object Chance="10" Number="2-4" Blueprint="Urchinspine Spearling" />
+    <object Chance="10" Number="1-2" Blueprint="Grand Lobster" />
+    <object Chance="10" Number="1-3" Blueprint="Mindless Mystic" />
+    <object Chance="10" Number="1-4" Blueprint="Starfish crusher" />
+    <object Chance="10" Number="1-3" Blueprint="Cone Snail" />
+    <object Chance="10" Number="1-4" Blueprint="Shadow Scallop" />
+    <object Chance="10" Number="1-2" Blueprint="crown of thorns starfish" />
+    <object Chance="10" Number="2-6" Blueprint="Abyssal Snail" />
+    <object Chance="10" Number="1-3" Blueprint="Thresher Shark" />
+    <object Chance="10" Number="1-4" Blueprint="Angler Fish" />
+    <object Chance="10" Number="1-4" Blueprint="Gulper Eel" />
+    <object Chance="10" Number="1-2" Blueprint="Colossal Squid" />
+    <object Chance="10" Number="2-6" Blueprint="Hag Fish" />
+    <object Chance="10" Number="1-6" Blueprint="Pistol Shrimp" />
+
+    <group Number="5" Style="pickone" Name="MacroDungeonFeatures">
+      <table Weight="100" Name="SunkenOceanZoneGlobals-Creatures" />
+      <table Weight="10" Name="Junk 6" />
+    </group>
+
+    <group Chance="10" Style="pickone" Name="BigCreature">
+      <object Weight="10" Blueprint="echinoderm god Yhagnifrk" />
+      <object Weight="10" Blueprint="shark god Mahuakazi" />
+      <object Weight="10" Blueprint="crab god Karkhamack" />
+      <object Weight="10" Blueprint="snail god Balmuga" />
+      <object Weight="10" Blueprint="snail god Giphloug" />
+      <object Weight="10" Blueprint="snail god Faufghom" />
+      <object Weight="10" Blueprint="crab god Chaxizckrab" />
+      <object Weight="10" Blueprint="crab god Xakicark" />
+      <object Weight="10" Blueprint="shark god Nahuoja" />
+      <object Weight="10" Blueprint="shark god Oulaphis" />
+      <object Weight="10" Blueprint="echinoderm god Vhoukuaqq" />
+      <object Weight="10" Blueprint="echinoderm god Zilughruko" />
+    </group>
+
+  </population>
+
+  <population Name="SunkenOceanPerSector">
+    <object Chance="5" Number="2-4" Blueprint="Homarid" />
+    <object Chance="5" Number="1-3" Blueprint="Coconut Crab" />
+    <object Chance="5" Number="1-4" Blueprint="Limulicron Warrior" />
+    <object Chance="5" Number="2-4" Blueprint="Urchinspine Spearling" />
+    <object Chance="1" Number="1-2" Blueprint="Hermit Knight" />
+    <object Chance="5" Number="1-6" Blueprint="Eyeless King Crab" />
+    <object Chance="5" Number="1-3" Blueprint="Mindless Mystic" />
+    <object Chance="5" Number="1-4" Blueprint="Starfish crusher" />
+    <object Chance="5" Number="1-3" Blueprint="Cone Snail" />
+    <object Chance="5" Number="1-4" Blueprint="Shadow Scallop" />
+    <object Chance="1" Number="1-2" Blueprint="Grand Lobster" />
+    <object Chance="1" Number="1" Blueprint="crown of thorns starfish" />
+    <object Chance="5" Number="2-6" Blueprint="Abyssal Snail" />
+    <object Chance="5" Number="1-3" Blueprint="Thresher Shark" />
+    <object Chance="5" Number="1-4" Blueprint="Angler Fish" />
+    <object Chance="3" Number="1-4" Blueprint="Gulper Eel" />
+    <object Chance="1" Number="1" Blueprint="Colossal Squid" />
+    <object Chance="5" Number="2-6" Blueprint="Hag Fish" />
+    <object Chance="5" Number="1-6" Blueprint="Pistol Shrimp" />
+    <object Chance="5" Number="2-4" Blueprint="Mine Drone" />
+    <object Chance="2" Number="1-2" Blueprint="Crawling Cannon" />
+  </population>
+  <population Name="SunkenOceanZoneGlobals-Creatures">
+    <object Chance="15" Number="1-3" Blueprint="Coconut Crab" />
+    <object Chance="15" Number="1-4" Blueprint="Limulicron Warrior" />
+    <object Chance="15" Number="2-4" Blueprint="Urchinspine Spearling" />
+    <object Chance="10" Number="1-6" Blueprint="Eyeless King Crab" />
+    <object Chance="15" Number="1-3" Blueprint="Mindless Mystic" />
+    <object Chance="15" Number="1-4" Blueprint="Starfish crusher" />
+    <object Chance="15" Number="1-3" Blueprint="Cone Snail" />
+    <object Chance="15" Number="1-4" Blueprint="Shadow Scallop" />
+    <object Chance="5" Number="1-2" Blueprint="Grand Lobster" />
+    <object Chance="5" Number="1-2" Blueprint="crown of thorns starfish" />
+    <object Chance="10" Number="2-6" Blueprint="Abyssal Snail" />
+    <object Chance="15" Number="1-3" Blueprint="Thresher Shark" />
+    <object Chance="15" Number="1-4" Blueprint="Angler Fish" />
+    <object Chance="15" Number="1-4" Blueprint="Gulper Eel" />
+    <object Chance="5" Number="1-2" Blueprint="Colossal Squid" />
+    <object Chance="10" Number="2-6" Blueprint="Hag Fish" />
+    <object Chance="10" Number="1-6" Blueprint="Pistol Shrimp" />
+    <object Chance="15" Number="2-4" Blueprint="Mine Drone" />
+    <object Chance="10" Number="1-2" Blueprint="Crawling Cannon" />
+  </population>
+
+  <!-- Simian Dream Space -->
+
+  <population Name="SimianCity">
+	<group Name="Contents" Style="pickeach">
+	  <object Chance="100" Number="1d4" Blueprint="Ogre Ape" />
+	  <object Chance="100" Number="1d6" Blueprint="Albino ape" />
+	  <object Chance="100" Number="1d4" Blueprint="Cyclopean Gibbon" />
+	  <object Chance="100" Number="2d8" Blueprint="Simian Citizen" />
+	  <object Chance="100" Number="1d8" Blueprint="Simian Denizen" />
+	  <object Chance="100" Number="1d8" Blueprint="Mandrill Guard" />
+	  <object Chance="100" Number="1d4" Blueprint="Apeling Scion" />
+	  <object Chance="100" Number="1d4" Blueprint="Simian Monarch" />
+	  <object Chance="100" Number="1d6" Blueprint="Dreamborn Ape" />
+	  <object Chance="100" Number="1" Blueprint="Dreamborn Ape King Khomga" />
+	</group>
+  </population>
+  <population Name="SimianDreamCity">
+	<group Name="Contents" Style="pickeach">
+	  <object Chance="100" Number="1d6" Blueprint="Ogre Ape" />
+	  <object Chance="100" Number="1d4" Blueprint="Albino ape" />
+	  <object Chance="100" Number="1d4" Blueprint="Cyclopean Gibbon" />
+	  <object Chance="100" Number="2d8" Blueprint="Simian Citizen" />
+	  <object Chance="100" Number="2d6" Blueprint="Simian Denizen" />
+	  <object Chance="100" Number="2d6" Blueprint="Mandrill Guard" />
+	  <object Chance="100" Number="1d4" Blueprint="Apeling Scion" />
+	  <object Chance="100" Number="1d4" Blueprint="Simian Monarch" />
+	  <object Chance="100" Number="1d8" Blueprint="Dreamborn Ape" />
+	  <object Chance="100" Number="1" Blueprint="Dreamborn Monkey Queen Chamba" />
+	</group>
+  </population>
+  <population Name="SimianDreamCastle">
+	<group Name="Contents" Style="pickeach">
+	  <object Chance="100" Number="1d8" Blueprint="Ogre Ape" />
+	  <object Chance="100" Number="1d8" Blueprint="Albino ape" />
+	  <object Chance="100" Number="2d6" Blueprint="Cyclopean Gibbon" />
+	  <object Chance="100" Number="2d6" Blueprint="Simian Citizen" />
+	  <object Chance="100" Number="2d6" Blueprint="Simian Denizen" />
+	  <object Chance="100" Number="2d8" Blueprint="Mandrill Guard" />
+	  <object Chance="100" Number="1d6" Blueprint="Apeling Scion" />
+	  <object Chance="100" Number="1d6" Blueprint="Simian Monarch" />
+	  <object Chance="100" Number="2d6" Blueprint="Dreamborn Ape" />
+	  <object Chance="100" Number="1" Blueprint="Dreamborn Ape King Lauwi" />
+	</group>
+  </population>
+
+  <population Name="SimianDreamPerSector">
+    <object Chance="5" Number="1-6" Blueprint="Ogre Ape" />
+    <object Chance="5" Number="1-8" Blueprint="Albino ape" />
+    <object Chance="5" Number="1-8" Blueprint="Cyclopean Gibbon" />
+    <object Chance="10" Number="2-8" Blueprint="Simian Citizen" />
+    <object Chance="10" Number="2-8" Blueprint="Simian Denizen" />
+    <object Chance="5" Number="1-6" Blueprint="Mandrill Guard" />
+    <object Chance="5" Number="1-3" Blueprint="Apeling Scion" />
+    <object Chance="5" Number="1-3" Blueprint="Simian Monarch" />
+    <object Chance="5" Number="1-3" Blueprint="Dreamborn Ape" />
+  </population>
+
+  <population Name="SimianRuins_One">
+    <object Chance="100" Number="2d4" Blueprint="Monkey Ruindweller" />
+    <object Chance="100" Number="1d8" Blueprint="Wild Monkey" />
+    <object Chance="100" Number="1d6" Blueprint="Quartz Baboon" />
+    <table Chance="100" Name="BigBaboonParty" />
+  </population>
+
+  <population Name="SimianRuins_Two">
+    <object Chance="100" Number="2d6" Blueprint="Monkey Ruindweller" />
+    <object Chance="100" Number="1d8" Blueprint="Wild Monkey" />
+    <object Chance="100" Number="1d8" Blueprint="Quartz Baboon" />
+  </population>
+
+  <population Name="SimianRuinsPerSector">
+    <object Chance="25" Number="1-6" Blueprint="Monkey Ruindweller" />
+    <object Chance="15" Number="1-4" Blueprint="Wild Monkey" />
+    <object Chance="15" Number="1-4" Blueprint="Quartz Baboon" />
+      <object Chance="25" Number="2-8" Blueprint="Baboon" />
+      <object Chance="25" Number="1-6" Blueprint="Hulking Baboon" />
+      <object Chance="25" Number="1-4" Blueprint="Shrewd Baboon" />
+      <object Chance="5" Number="1" Blueprint="Baboon Hero 1" />
+  </population>
+
+</populations>

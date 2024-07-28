@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Map
+  Width="80"
+  Hight="25">
+  <cell
+    X="43"
+    Y="15">
+    <object Name="TerrainCitadels"></object>
+  </cell>
+  <cell
+    X="27"
+    Y="8">
+    <object Name="TerrainCitadels"></object>
+  </cell>
+  <cell
+    X="35"
+    Y="12">
+    <object Name="TerrainCitadels"></object>
+  </cell>
+  <cell
+    X="65"
+    Y="12">
+    <object Name="Simian_Ruins"></object>
+  </cell>
+  <cell
+    X="65"
+    Y="0">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="68"
+    Y="0">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="72"
+    Y="0">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="77"
+    Y="0">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="70"
+    Y="5">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="72"
+    Y="4">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="56"
+    Y="0">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="56"
+    Y="10">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="15"
+    Y="0">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="25"
+    Y="0">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="41"
+    Y="0">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+  <cell
+    X="43"
+    Y="4">
+    <object Name="TerrainAncientCities"></object>
+  </cell>
+
+  <cell
+    X="6"
+    Y="10">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="6"
+    Y="9">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="6"
+    Y="11">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="6"
+    Y="12">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="7"
+    Y="10">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="7"
+    Y="11">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="7"
+    Y="12">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="8"
+    Y="10">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="8"
+    Y="11">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="8"
+    Y="12">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="6"
+    Y="13">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="7"
+    Y="13">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+  <cell
+    X="8"
+    Y="13">
+    <object Name="TerrainSunkenOceans"></object>
+  </cell>
+
+  <cell
+    X="65"
+    Y="2">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="64"
+    Y="3">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="63"
+    Y="3">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="64"
+    Y="2">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="66"
+    Y="2">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="63"
+    Y="2">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="62"
+    Y="2">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="61"
+    Y="2">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="66"
+    Y="1">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="67"
+    Y="1">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="68"
+    Y="1">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="69"
+    Y="1">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="69"
+    Y="0">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="70"
+    Y="0">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="63"
+    Y="1">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="62"
+    Y="1">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="61"
+    Y="1">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+  <cell
+    X="61"
+    Y="0">
+      <object Name="TerrainSteppe"></object>
+  </cell>
+
+</Map>

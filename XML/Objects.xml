@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Simian_Ruins" Inherits="Terrain">
+    <part Name="Render" 
+      DisplayName="Deep Jungle" 
+      Tile="BestiaryTerrain/Simian_Ruins.png"  
+      ColorString="&amp;g^k"  
+      DetailColor="G">Textures
+    </part>
+    <part Name="Description" Short="Thriving florae pack the loam with maze-dense roots, and a high-wreath canopy chokes off the last beams of light. The howls and hoots of apes echo through the foliage."></part>
+    <tag Name="NoBiomes" Value="2"></tag>
+  </object>
+</objects>

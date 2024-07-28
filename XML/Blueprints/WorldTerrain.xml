@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+ <object Name="TerrainSteppe" Inherits="Terrain">
+    <part Name="Render" DisplayName="steppe" RenderString="005" ColorString="&amp;r" DetailColor="g" Tile="BestiaryTerrain/Steppe.png" HFlip="true" />
+    <part Name="TerrainTravel" Segments="2000" />
+    <part Name="Description" Short="Harsh grasslands stretch onwards unto the edge of eternity's wheel smeared across the habitable edge of reality. Here the glacial meltwater nourishes strange plants and mysterious beasts. Intruders from beyond the jagged towers of Qud's mountains have established themselves amidst the razored flora and gnarled hillsides." />
+		<part Name="Physics" Solid="true" />
+		<tag Name="IndefiniteArticle" Value="the" />
+		<tag Name="DefiniteArticle" Value="the" />
+		<xtagGrammar Proper="true" massNoun="false" />
+		<tag Name="DefaultWall" Value="Grass Wall" />
+    <tag Name="LairOwnerTable" Value="LairOwners_Steppe" />
+		<tag Name="RuinWalls" Value="HighTierRegionRuinWalls" />
+    <tag Name="Terrain" Value="Steppe" />
+    <tag Name="RegionTier" Value="8" />
+  </object>
+  <object Name="TerrainCitadels" Inherits="Terrain">
+    <part Name="Render" DisplayName="Swarming Citadel" Tile="BestiaryTerrain/Swarming_Citadel.png" DetailColor="W" RenderString="007" ColorString="&amp;G^k" />
+    <part Name="Description" Short="A vast fortress of reinforced chitin built within the jungle depths by multitudes of arthropods." />
+    <tag Name="Gender" Value="plural" />
+    <xtagGrammar iArticle="the" massNoun="false" />
+    <tag Name="OverlayColor" Value="&amp;W" />
+    <tag Name="RegionTier" Value="4" />
+    <tag Name="Terrain" Value="Ruins" />
+    <tag Name="AlternateTerrainName" Value="Citadel" />
+    <tag Name="MinimapColor" Value="g"></tag>
+  </object>
+  <object Name="TerrainSunkenOceans" Inherits="Terrain">
+    <part Name="Render" DisplayName="salt dunes" RenderString="247" ColorString="&amp;Y^k" Tile="Terrain/sw_desert.bmp" />
+    <part Name="TerrainTravel" Segments="2500" LostChance="10" TravelClass="Survival_SaltDesertSurvival" />
+    <part Name="AnimatedMaterialSaltDunes" />
+    <part Name="Description" Short="The ivory sea's dunes are like waves frozen in place. There are cracks in the salt from where the earth, blistered by the jeweled sun, contracted and broke, letting the old waters seep down beyond the sight of day. The horizon melts the sky together with the vast plain of Moghra'yi, the Great Salt Desert." />
+    <tag Name="Gender" Value="plural" />
+    <part Name="UnityPrefabImposterChance" Chance="10" PrefabID="Prefabs/Particles/DesertWinds" />
+    <tag Name="DungeonAttributes" Value="Desert" />
+    <tag Name="DefaultWall" Value="Fossil Coral Rag" />
+    <tag Name="LairOwnerTable" Value="LairOwners_Saltdunes" />
+    <tag Name="Terrain" Value="Saltdunes" />
+    <tag Name="RegionTier" Value="2" />
+  </object>
+  <object Name="TerrainAncientCities" Inherits="Terrain">
+    <part Name="Physics" Solid="true" />
+    <part Name="Render" DisplayName="mountains" RenderString="030" ColorString="&amp;Y^k" Tile="Terrain/sw_mountains.bmp" />
+    <part Name="TerrainTravel" Segments="2000" TravelClass="Survival_MountainsSurvival" />
+    <part Name="RandomWorldTile" Tiles="Terrain/sw_mountains.bmp,Terrain/sw_mountains_2.bmp" DoubleTiles="Terrain/tile_mountain[DIR]~#1-2~.bmp" />
+    <part Name="Description" Short="In the wave graph of stone over time, where the world plates once vexed themselves into war, a quiet peace has settled. The old stone is gnarled by the shaping of ancient powers thankfully lost to the shrouded depths of eternity." />
+    <tag Name="DefaultWall" Value="Dark Granite" />
+		<tag Name="RuinWalls" Value="HighTierRegionRuinWalls" />
+    <tag Name="LairOwnerTable" Value="LairOwners_Mountains" />
+    <tag Name="Terrain" Value="Mountains" />
+    <tag Name="RegionTier" Value="4" />
+    <tag Name="Gender" Value="plural" />
+  </object>
+
+
+</objects>

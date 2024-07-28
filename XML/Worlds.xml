@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<worlds>
+<world Name="Simoganth" DisplayName="Within" Plane="Simoganth" Protocol="Simoganth">
+	</world>
+ <world Name="Interior" Load="Merge">
+    <!-- Simoganth -->
+<cell Name="Simian Dream Space" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Simian Dream Space" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Simian_City.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Simian City"></postbuilder>
+			  <widget Blueprint="AmbientLight" />
+		  </zone>
+	  </cell>
+<cell Name="Simian Dream City" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Simian Dream Space" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Simian_Dream_City.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Simian Dream City"></postbuilder>
+			  <widget Blueprint="AmbientLight" />
+		  </zone>
+	  </cell>
+<cell Name="Simian Dream Castle" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Simian Dream Castle" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Simian_Dream_Castle.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Simian Dream Castle"></postbuilder>
+			  <widget Blueprint="AmbientLight" />
+		  </zone>
+	  </cell>
+    <!-- Great Mechacolossus -->
+<cell Name="Mecha_colossus_LeftLeg" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Mechacolossus leg chamber" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Mecha_colossus_LeftLeg.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Mechacolossus1"></postbuilder>
+		  </zone>
+	  </cell>
+<cell Name="Mecha_colossus_RightLeg" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Mechacolossus leg chamber" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Mecha_colossus_RightLeg.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Mechacolossus1"></postbuilder>
+		  </zone>
+	  </cell>
+<cell Name="Mecha_colossus_Hip" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Mechacolossus hip chamber" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Mecha_colossus_Hip.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Mechacolossus1"></postbuilder>
+		  </zone>
+	  </cell>
+<cell Name="Mecha_colossus_Chest" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Mechacolossus chest chamber" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Mecha_colossus_Chest.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Mechacolossus1"></postbuilder>
+		  </zone>
+	  </cell>
+<cell Name="Mecha_colossus_LeftArm" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Mechacolossus arm chamber" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Mecha_colossus_LeftArm.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Mechacolossus1"></postbuilder>
+		  </zone>
+	  </cell>
+<cell Name="Mecha_colossus_RightArm" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Mechacolossus arm chamber" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Mecha_colossus_RightArm.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Mechacolossus1"></postbuilder>
+		  </zone>
+	  </cell>
+<cell Name="Mecha_colossus_Head" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Mechacolossus head chamber" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Mecha_colossus_Head.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Mechacolossus2"></postbuilder>
+		  </zone>
+	  </cell>
+<cell Name="Mecha_colossus_Spine" LandingZone="1,1">
+		  <zone Level="10" x="1" y="1" Name="Mechacolossus spine chamber" IncludeStratumInZoneDisplay="false" > 
+			  <builder Class="MapBuilder" FileName="Mecha_colossus_Spine.rpm"/>
+		    <postbuilder Class="ZoneTemplate:Mechacolossus1"></postbuilder>
+		  </zone>
+	  </cell>
+
+</world>
+	<world Name="JoppaWorld" Load="Merge">
+		<cell Name="Simian Ruins" Inherits="DeepJungle" ApplyTo="Simian_Ruins" LandingZone="1,1" Mutable="false">
+			<zone Level="5-7" x="0-2" y="0-2" Name="sky above Simian City" IndefiniteArticle="the" DisableForcedConnections="Yes">
+				<builder Class="Sky" />
+			</zone>
+			<zone Level="8" x="1" y="1" Name="Simian Ruins" ProperName="true" IncludeStratumInZoneDisplay="false" DisableForcedConnections="Yes">
+				<map FileName="Simian_Ruins_SkyTwo.rpm" />
+		    <postbuilder Class="ZoneTemplate:Simian Ruins Two"></postbuilder>
+				<builder Class="Music" Track="Overworld1" Chance="100" />
+			</zone>
+			<zone Level="9" x="1" y="1" Name="Simian Ruins" ProperName="true" IncludeStratumInZoneDisplay="false" DisableForcedConnections="Yes">
+				<map FileName="Simian_Ruins_SkyOne.rpm" />
+		    <postbuilder Class="ZoneTemplate:Simian Ruins Two"></postbuilder>
+				<builder Class="Music" Track="Overworld1" Chance="100" />
+			</zone>
+			<zone Level="10" x="1" y="1" Name="Simian Ruins" ProperName="true" IncludeStratumInZoneDisplay="false" DisableForcedConnections="Yes">
+				<map FileName="Simian_Ruins.rpm" />
+		    <postbuilder Class="ZoneTemplate:Simian Ruins One"></postbuilder>
+				<builder Class="Music" Track="Overworld1" Chance="100" />
+			</zone>
+		</cell>
+    <!-- Steppe -->
+
+    <cell Name="Steppe" Inherits="DefaultJoppaCell" ApplyTo="TerrainSteppe">
+      <zone Level="5-9" x="0-2" y="0-2" Name="sky above steppe" IndefiniteArticle="the">
+        <builder Class="Sky"></builder>
+      </zone>
+      <zone Level="10" x="0-2" y="0-2" Name="steppe" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+        <postbuilder Class="ZoneTemplate:Steppe"></postbuilder>        
+        <builder Class="JungleRuins" Chance="5"></builder>
+        <builder Class="FactionEncounters" Population="GenericFactionPopulation"></builder>
+        <music Track="Overworld1" />
+      </zone>
+      <zone Level="11-15" x="0-2" y="0-2" Name="subterranean steppe">
+        <builder Class="Strata"></builder>
+        <builder Class="ZoneTemplate:SteppeCaves"></builder>
+        <builder Class="PossibleCryotube"></builder>
+        <builder Class="FactionEncounters" Population="GenericFactionPopulation"></builder>
+        <music Track="Overworld1" />
+      </zone>
+    </cell>
+    <!-- Swarming Citadels -->
+
+    <cell Name="Swarming Citadel" Inherits="Jungle" ApplyTo="TerrainCitadels" Mutable="false">
+      <zone Level="5" x="1" y="1" Name="Swarming citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+				<map FileName="SwarmStair6.rpm" />
+        <builder Class="CrabEmperor_BestiaryExpanded_CitadelBuilder"></builder>
+        <postbuilder Class="ZoneTemplate:Citadels"></postbuilder>        
+		    <music Track="Overworld1" />
+	    </zone>
+
+      <zone Level="6" x="1" y="1" Name="Swarming citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+				<map FileName="SwarmStair5.rpm" />
+        <builder Class="CrabEmperor_BestiaryExpanded_CitadelBuilder"></builder>
+        <postbuilder Class="ZoneTemplate:Citadels"></postbuilder>        
+		    <music Track="Overworld1" />
+	    </zone>
+
+      <zone Level="7" x="1" y="1" Name="Swarming citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+				<map FileName="SwarmStair4.rpm" />
+        <builder Class="CrabEmperor_BestiaryExpanded_CitadelBuilder"></builder>
+        <postbuilder Class="ZoneTemplate:Citadels"></postbuilder>        
+		    <music Track="Overworld1" />
+	    </zone>
+
+      <zone Level="8" x="1" y="1" Name="Swarming citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+				<map FileName="SwarmStairtres.rpm" />
+        <builder Class="CrabEmperor_BestiaryExpanded_CitadelBuilder"></builder>
+        <postbuilder Class="ZoneTemplate:Citadels"></postbuilder>        
+		    <music Track="Overworld1" />
+	    </zone>
+
+      <zone Level="9" x="1" y="1" Name="Swarming citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+				<map FileName="SwarmStair2.rpm" />
+        <builder Class="CrabEmperor_BestiaryExpanded_CitadelBuilder"></builder>
+        <postbuilder Class="ZoneTemplate:Citadels"></postbuilder>        
+		    <music Track="Overworld1" />
+	    </zone>
+
+      <zone Level="10" x="1" y="1" Name="Swarming citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+				<map FileName="SwarmStair1.rpm" />
+        <builder Class="CrabEmperor_BestiaryExpanded_CitadelBuilder"></builder>
+        <postbuilder Class="ZoneTemplate:Citadels"></postbuilder>        
+		    <music Track="Overworld1" />
+	    </zone>
+
+      <zone Level="11" x="1" y="1" Name="Swarming Citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+        <builder Class="Strata"></builder>
+        <builder Class="ZoneTemplate:CitadelDepths"></builder>
+	  	  <music Track="Caves1" />
+  		  <postbuilder Class="ZoneTemplate:Citadels 1"></postbuilder>
+	    </zone>
+
+      <zone Level="12" x="1" y="1" Name="Swarming Citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+        <builder Class="Strata"></builder>
+        <builder Class="ZoneTemplate:CitadelDepths"></builder>
+        <music Track="Caves1" />
+		    <postbuilder Class="ZoneTemplate:Citadels 2"></postbuilder>
+	    </zone>
+
+      <zone Level="13" x="1" y="1" Name="Swarming Citadel" AmbientBed="Sounds/Ambiences/amb_bed_jungle">
+        <builder Class="Strata"></builder>
+        <builder Class="ZoneTemplate:CitadelDepths"></builder>
+        <music Track="Caves1" />
+		    <postbuilder Class="ZoneTemplate:Citadels 3"></postbuilder>
+	    </zone>
+
+    </cell>
+    <cell Name="Ancient City" Inherits="DefaultJoppaCell" ApplyTo="TerrainAncientCities">
+      <zone Level="5-9" x="0-2" y="0-2" Name="sky above mountains" IndefiniteArticle="the" AmbientBed="Sounds/Ambiences/amb_bed_mountains">
+        <builder Class="Sky"></builder>
+      </zone>
+      <zone Level="10" x="0-2" y="0-2" Name="mountains" HasWeather="true" WindSpeed="0-100" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_mountains">
+        <builder Class="Hills"></builder>
+        <builder Class="StairsDown"></builder>    
+        <postbuilder Class="ZoneTemplate:Mountains"></postbuilder>    
+        <builder Class="FactionEncounters" Population="GenericFactionPopulation"></builder>
+        <music Track="Overworld1" />
+      </zone>
+      <zone Level="11-29" x="0-2" y="0-2" Name="subterranean mountains">
+        <builder Class="Strata"></builder>
+        <builder Class="ZoneTemplate:MountainCaves"></builder>
+        <builder Class="StairsDown"></builder>
+        <builder Class="PossibleCryotube"></builder>
+        <builder Class="FactionEncounters" Population="GenericFactionPopulation"></builder>
+        <music Track="Overworld1" />
+      </zone>
+      <zone Level="30-44" x="0-2" y="0-2" Name="ancient city">
+        <builder Class="Strata"></builder>
+        <builder Class="Ruins" Name="Ruins"></builder>
+        <builder Class="ZoneTemplate:AncientCity"></builder>
+        <music Track="Overworld1" />
+      </zone>
+      <zone Level="45" x="0-2" y="0-2" Name="forbidden city">
+        <builder Class="Strata"></builder>
+        <builder Class="Ruins" Name="Ruins"></builder>
+        <builder Class="ZoneTemplate:AncientCity2"></builder>
+        <music Track="Overworld1" />
+      </zone>
+    </cell>
+    <cell Name="Sunken Ocean" Inherits="DefaultJoppaCell" ApplyTo="TerrainSunkenOceans">
+      <zone Level="5-9" x="0-2" y="0-2" Name="sky above salt desert" IndefiniteArticle="the" AmbientBed="Sounds/Ambiences/amb_bed_saltDesert">
+        <builder Class="Sky"></builder>
+      </zone>
+      <zone Level="10" x="0-2" y="0-2" Name="salt desert" HasWeather="true" WindSpeed="0-100" WindDirections="NW,NW,W,W,SW" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_saltDesert">
+        <builder Class="SaltDunes"></builder>
+        <builder Class="StairsDown"></builder>    
+        <postbuilder Class="ZoneTemplate:SaltDesert"></postbuilder>        
+        <builder Class="FactionEncounters" Population="GenericFactionPopulation"></builder>
+        <music Track="MoghrayiRemembrance" />
+      </zone>
+      <zone Level="11-24" x="0-2" y="0-2" Name="subterranean salt desert">
+        <builder Class="Strata"></builder>
+        <builder Class="ZoneTemplate:SunkenOceanCaves"></builder>
+        <builder Class="StairsDown"></builder>    
+        <builder Class="PossibleCryotube"></builder>
+        <builder Class="FactionEncounters" Population="GenericFactionPopulation"></builder>
+        <music Track="MoghrayiRemembrance" />
+      </zone>
+      <zone Level="25-44" x="0-2" y="0-2" Name="sunken ocean">
+        <builder Class="Strata"></builder>
+        <builder Class="OverlandWater" Underground="true"></builder>
+        <builder Class="ZoneTemplate:SunkenOcean"></builder>
+        <music Track="Overworld1" />
+      </zone>
+      <zone Level="45" x="0-2" y="0-2" Name="abyssal ocean">
+        <builder Class="Strata"></builder>
+        <builder Class="OverlandWater" Underground="true"></builder>
+        <builder Class="ZoneTemplate:SunkenOcean2"></builder>
+        <music Track="Overworld1" />
+      </zone>
+    </cell>
+
+	</world>
+</worlds>

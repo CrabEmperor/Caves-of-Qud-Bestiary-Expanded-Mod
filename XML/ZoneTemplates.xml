@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<zonetemplates>
+
+  <!-- Steppe -->
+
+  <zonetemplate Name="Steppe" RegionSize="200">
+    <global>      
+      <population Table="SteppeZoneGlobals-Surface" Hint="Any"></population>
+      <cellfilterout Filter="!Reachable">
+        <population Table="SteppeZoneGlobals-Reachable"></population>
+      </cellfilterout>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>
+      <population Table="SteppePerSector"></population>
+    </eachregion>
+  </zonetemplate>
+
+  <zonetemplate Name="SteppeCaves" RegionSize="100">
+    <global>
+      <population Table="SteppeZoneGlobals-Underground" Hint="Any"></population>
+      <cellfilterout Filter="!Reachable">
+        <population Table="SteppeZoneGlobals-Reachable"></population>
+      </cellfilterout>
+    </global>
+
+    <eachregion>
+      <!-- Fill isolated pockets -->
+      <group Criteria="Isolated" Chance="1">
+        <population Table="TreasureRoom"/>
+        <exit/>
+      </group>
+      <group Criteria="Isolated" Chance="100">
+        <population Table="IsolatedPocketDecoration"/>
+        <exit/>
+      </group>
+      <!-- Place generic region decorations -->
+      <population Table="CaveDecoration"/>
+      <!-- Don't place monsters in regions containing zone connections -->
+      <group Criteria="Connection">
+        <exit/>
+      </group>
+      <group Criteria="Furthest" Chance="20">
+        <population Table="Tier{zonetier}BossEncounter"/>
+        <population Table="Chests {zonetier}"/>
+        <exit/>
+      </group>
+      <!-- If we've gotten this far just dump a standard region worth of mobs into it -->
+      <population Table="SteppeCavePopulation"></population>
+      <population Chance="20" Table="SteppeCavePopulation"></population>
+      <population Table="SteppePerSector"></population>
+    </eachregion>
+  </zonetemplate>
+
+
+  <!-- Swarming Citadels -->
+  <zonetemplate Name="Citadels" RegionSize="200">
+    <global>      
+      <population Table="Citadels_Surface" Hint="Any"></population>
+      <cellfilterout Filter="!Reachable">
+        <population Table="CitadelsZoneGlobals-Reachable"></population>
+      </cellfilterout>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>
+      <population Table="CitadelsPerSector"></population>
+    </eachregion>
+  </zonetemplate>
+
+  <zonetemplate Name="Citadels 1" RegionSize="200">
+    <global>
+      <population Table="Citadels 1"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>
+      <population Table="CitadelsPerSector"></population>
+    </eachregion>
+  </zonetemplate>
+  <zonetemplate Name="Citadels 2" RegionSize="200">
+    <global>
+      <population Table="Citadels 2"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="CitadelsPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+  <zonetemplate Name="Citadels 3" RegionSize="50">
+    <global>
+      <population Table="Citadels 3"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>
+      <population Table="CitadelsPerSector"></population>
+      <!--<group Criteria="Deadend">      
+      </group>-->
+    </eachregion>
+  </zonetemplate>
+
+  <zonetemplate Name="CitadelDepths" RegionSize="100">
+    <global>
+      <population Table="JungleCaveGlobals"></population>
+    </global>
+
+    <eachregion>
+      <!-- Fill isolated pockets -->
+      <group Criteria="Isolated" Chance="1">
+        <population Table="TreasureRoom"/>
+        <exit/>
+      </group>
+      <group Criteria="Isolated" Chance="100">
+        <population Table="IsolatedPocketDecoration"/>
+        <exit/>
+      </group>
+      <!-- Place generic region decorations -->
+      <population Table="CaveDecoration"/>
+      <!-- Don't place monsters in regions containing zone connections -->
+      <group Criteria="Connection">
+        <exit/>
+      </group>
+      <group Criteria="Furthest" Chance="20">
+        <population Table="Tier{zonetier}BossEncounter"/>
+        <population Table="Chests {zonetier}"/>
+        <exit/>
+      </group>
+      <!-- If we've gotten this far just dump a standard region worth of mobs into it -->      
+      <population Table="CitadelsZoneGlobals-Creatures"></population>
+      <population Chance="20" Table="CitadelsZoneGlobals-Creatures"></population>      
+    </eachregion>
+  </zonetemplate>
+
+  <!-- Mechacolossus -->
+
+  <zonetemplate Name="Mechacolossus1" RegionSize="200">
+    <global>
+      <population Table="Mechacolossus_one"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="MechacolossusPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+
+  <zonetemplate Name="Mechacolossus2" RegionSize="200">
+    <global>
+      <population Table="Mechacolossus_two"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="MechacolossusPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+
+  <!-- Sunken Ocean -->
+
+  <zonetemplate Name="SunkenOcean" RegionSize="200">
+    <global>
+      <population Table="SunkenOcean_one"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="SunkenOceanPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+  <zonetemplate Name="SunkenOcean2" RegionSize="200">
+    <global>
+      <population Table="SunkenOcean_two"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="SunkenOceanPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+
+  <zonetemplate Name="SunkenOceanCaves" RegionSize="100">
+    <global>
+      <population Table="SaltDuneCaveGlobals"></population>
+    </global>
+
+    <eachregion>
+      <!-- Fill isolated pockets -->
+      <group Criteria="Isolated" Chance="1">
+        <population Table="TreasureRoom"/>
+        <exit/>
+      </group>
+      <group Criteria="Isolated" Chance="100">
+        <population Table="IsolatedPocketDecoration"/>
+        <exit/>
+      </group>
+      <!-- Place generic region decorations -->
+      <population Table="SunkenCaveDecoration"/>
+      <!-- Don't place monsters in regions containing zone connections -->
+      <group Criteria="Connection">
+        <exit/>
+      </group>
+      <group Criteria="Furthest" Chance="20">
+        <population Table="Tier{zonetier}BossEncounter"/>
+        <population Table="Chests {zonetier}"/>
+        <exit/>
+      </group>
+      <!-- If we've gotten this far just dump a standard region worth of mobs into it -->
+      <population Table="SunkenCavePopulation"></population>
+      <population Chance="20" Table="SunkenCavePopulation"></population>
+    </eachregion>
+  </zonetemplate>
+
+  <!-- Ancient City -->
+
+  <zonetemplate Name="AncientCity" RegionSize="200">
+    <global>
+      <population Table="AncientCity_one"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="AncientCityPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+  <zonetemplate Name="AncientCity2" RegionSize="200">
+    <global>
+      <population Table="AncientCity_two"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="AncientCityPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+
+  <!-- Simian Dream Space -->
+
+  <zonetemplate Name="Simian City" RegionSize="200">
+    <global>
+      <population Table="SimianCity"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="SimianDreamPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+
+  <zonetemplate Name="Simian Dream City" RegionSize="200">
+    <global>
+      <population Table="SimianDreamCity"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="SimianDreamPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+
+  <zonetemplate Name="Simian Dream Castle" RegionSize="200">
+    <global>
+      <population Table="SimianDreamCastle"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="SimianDreamPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+
+  <zonetemplate Name="Simian Ruins One" RegionSize="200">
+    <global>
+      <population Table="SimianRuins_One"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="SimianRuinsPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+  <zonetemplate Name="Simian Ruins Two" RegionSize="200">
+    <global>
+      <population Table="SimianRuins_Two"></population>
+    </global>
+
+    <eachregion>
+      <group Criteria="Connection">
+        <exit/>
+      </group>      
+      <population Table="SimianRuinsPerSector"></population>      
+    </eachregion>
+  </zonetemplate>
+
+</zonetemplates>
